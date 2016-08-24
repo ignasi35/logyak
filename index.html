@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myLogyakApp">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Excursions Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Logyak</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#">Details</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Miles</a></li>
+            <li><a href="#">Login</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-2">
+          <img src="img/logo_group.jpg" class="logoGroup"></src>
+        </div>
+        <div class="col-xs-8">
+          <h2 class="sub-header" id="sub-header">Excursions Yak Group</h2>
+        </div>
+        <div class="col-xs-2">
+           <a class="btn btn-default" id="editButton" href="excursionDetailForm.html">New Excursion</a>
+        </div>
+
+      </div>
+
+      <div class="table-responsive" ng-controller="DataExcursionsController">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Excursion</th>
+              <th>Date</th>
+              <th>Attendees</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr ng-repeat = "excursion in excursions.data">
+              <td>{{excursion.id}}</td>
+              <td>{{excursion.name}}</td>
+              <td>{{excursion.date}}</td>
+              <td>{{excursion.attendees}}</td>
+              <td><a class="btn btn-default" href={{excursion.html}}>See details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <footer class="footer" ng-controller="FooterQuoteController">
+<!--       <p class="messageFooter"> Worry less and paddle more! </p>
+      <p class="messageFooter" ng-controller="FooterQuote"> {{showQuote()}} </p> -->
+    </footer>
+
+    <!-- core JavaScript Placed at the end of the document so the pages load faster -->
+    <!--================================================== -->
+    <!-- Bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Angular-->
+     
+      <script src='js/controller.js'></script>
+      <script src='js/service.js'></script>
+      <script src='js/app.js'></script>
+
+  </body>
+</html>
