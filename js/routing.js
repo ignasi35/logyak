@@ -13,8 +13,8 @@ angular.module ("logyakConfig",[])
 			// })
 
 			.when('/excursion/:id', {
-				templateUrl: 'templates/excursionDetail.html',
-				controller: 'excursionDetail'
+				templateUrl: 'templates/excursionDetails.html',
+				controller: 'ExcursionDetailsCtrl'
 			})
 
 			.otherwise({ redirectTo: '/' }); 
