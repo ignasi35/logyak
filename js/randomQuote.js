@@ -1,3 +1,9 @@
-var random = function() {
-    console.log (new Date().getTime() % 2 +1);
+function random () {
+	var n = new Date().getTime();
+	console.log(n);
+	if (n % 2 === 0) {
+		console.log("p1");
+	} else {
+		console.log("p2");
+	}
 };

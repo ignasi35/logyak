@@ -1,1 +1,6 @@
-angular.module("myLogyakApp",[ 'logyakControllers', 'logyakServices'])
+angular.module("myLogyakApp",[ 
+	'ngRoute',
+	'logyakControllers', 
+	'logyakServices',
+	'logyakConfig'
+]);

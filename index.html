@@ -19,15 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="css/dashboard.css" rel="stylesheet">
 
-    <!-- Angular -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.js"></script>
-
   </head>
 
   <body>
 
+    <!--Navigation bar-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -37,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Logyak</a>
+          <a class="navbar-brand" href="#/">Logyak</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -49,61 +45,42 @@
         </div>
       </div>
     </nav>
+    <!--/Navigation bar-->
 
+
+    <!-- Page Content -->
     <div class="container">
-
-      <div class="row">
-        <div class="col-xs-2">
-          <img src="img/logo_group.jpg" class="logoGroup"></src>
-        </div>
-        <div class="col-xs-8">
-          <h2 class="sub-header" id="sub-header">Excursions Yak Group</h2>
-        </div>
-        <div class="col-xs-2">
-           <a class="btn btn-default" id="editButton" href="excursionDetailForm.html">New Excursion</a>
-        </div>
-
-      </div>
-
-      <div class="table-responsive" ng-controller="DataExcursionsController">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Excursion</th>
-              <th>Date</th>
-              <th>Attendees</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody >
-            <tr ng-repeat = "excursion in excursions.data">
-              <td>{{excursion.id}}</td>
-              <td>{{excursion.name}}</td>
-              <td>{{excursion.date}}</td>
-              <td>{{excursion.attendees}}</td>
-              <td><a class="btn btn-default" href={{excursion.html}}>See details</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
+        <div ng-view></div>
     </div>
 
-    <footer class="footer" ng-controller="FooterQuoteController">
-<!--       <p class="messageFooter"> Worry less and paddle more! </p>
-      <p class="messageFooter" ng-controller="FooterQuote"> {{showQuote()}} </p> -->
+    <hr>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="messageFooter" ng-controller="FooterQuoteController"> {{quote}} </p>
     </footer>
 
-    <!-- core JavaScript Placed at the end of the document so the pages load faster -->
+
+
     <!--================================================== -->
+    <!-- core JavaScript Placed at the end of the document so the pages load faster -->
+
     <!-- Bootstrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Angular-->
-     
-      <script src='js/controller.js'></script>
-      <script src='js/service.js'></script>
-      <script src='js/app.js'></script>
+
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-resource.js"></script>
+
+    <!-- Custom JavaScript-->
+    <script src='js/app.js'></script>
+    <script src='js/controller.js'></script>
+    <script src='js/routing.js'></script>
+    <script src='js/services/services.module.js'></script>
+    <script src='js/services/excursionsList.js'></script>
+    <script src='js/services/quotesList.js'></script>
+
 
   </body>
 </html>

@@ -4,7 +4,7 @@ angular
 		.factory('FooterQuoteService',function( $http ) {
 			function getFooterQuotes() {
 				return $http
-					.get('/footerQuotes.json')
+					.get('/json/footerQuotes.json')
 					.then( function(httpQuotes){
 						return httpQuotes.data;
 					}); // returns a promise
