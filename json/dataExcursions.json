@@ -5,7 +5,7 @@
          "date":"19/08/2016",
          "attendees":"Francesc, M.Ángeles, Margarida, Joan, Manel, Ignasi, Anna",
          "distance": 13,
-         "html": "excursionDetail.html",
+         "html": "excursionDetail",
          "time":6,
          "sea conditions": "Gentle breeze, 2-3Btf, 0.5m wave height",
          "notes": []
@@ -16,7 +16,7 @@
          "date":"19/08/2016",
          "attendees":"Francesc, M.Ángeles, Margarida, Joan, Manel, Ignasi, Anna",
          "distance": 13,
-         "html": "excursionDetail.html",
+         "html": "excursionDetail",
          "time":5,
          "sea conditions": "Gentle breeze, 2-3Btf, 0.5m wave height",
          "notes": []
@@ -27,7 +27,7 @@
          "date":"19/08/2016",
          "attendees":"Francesc, M.Ángeles, Margarida, Joan, Manel, Ignasi, Anna",
          "distance": 13,
-         "html": "excursionDetail.html",
+         "html": "excursionDetail",
          "time":5,
          "sea conditions": "Gentle breeze, 2-3Btf, 0.5m wave height",
          "notes": []
@@ -38,7 +38,7 @@
          "date":"19/08/2016",
          "attendees":"Francesc, M.Ángeles, Margarida, Joan, Manel, Ignasi, Anna",
          "distance": 13,
-         "html": "excursionDetail.html",
+         "html": "excursionDetail",
          "time":5,
          "sea conditions": "Gentle breeze, 2-3Btf, 0.5m wave height",
          "notes": []
@@ -49,7 +49,7 @@
          "date":"19/08/2016",
          "attendees":"Francesc, M.Ángeles, Margarida, Joan, Manel, Ignasi, Anna",
          "distance": 13,
-         "html": "excursionDetail.html",
+         "html": "excursionDetail",
          "time":5,
          "sea conditions": "Gentle breeze, 2-3Btf, 0.5m wave height",
          "notes": []

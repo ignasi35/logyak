@@ -4,20 +4,17 @@ angular.module ("logyakConfig",[])
 		$routeProvider
 			.when('/', {
 				templateUrl: 'templates/excursionsList.html',
-				controller: 'DataExcursionsController',
-				controllerAs: 'excursionsList'
+				controller: 'ExcursionsListCtrl'
 			})
 
-			.when('/excursionDetailForm', {
-				templateUrl: 'templates/excursionDetailForm.html',
-				controller: 'excursionDetailForm',
-				controllerAs: 'excursionDetailForm'
-			})
+			// .when('/excursionDetailForm', {
+			// 	templateUrl: 'templates/excursionDetailForm.html',
+			// 	controller: 'excursionDetailForm'
+			// })
 
-			.when('/excursionDetail', {
+			.when('/excursion/:id', {
 				templateUrl: 'templates/excursionDetail.html',
-				controller: 'excursionDetail',
-				controllerAs: 'excursionDetail'
+				controller: 'excursionDetail'
 			})
 
 			.otherwise({ redirectTo: '/' }); 
