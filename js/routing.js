@@ -7,14 +7,13 @@ angular.module ("logyakConfig",[])
 				controller: 'ExcursionsListCtrl'
 			})
 
-			// .when('/excursionDetailForm', {
-			// 	templateUrl: 'templates/excursionDetailForm.html',
-			// 	controller: 'excursionDetailForm'
-			// })
-
 			.when('/excursion/:id', {
 				templateUrl: 'templates/excursionDetails.html',
 				controller: 'ExcursionDetailsCtrl'
+			})
+
+			.when('/editExcursion', {
+				templateUrl: 'templates/excursionDetailForm.html'
 			})
 
 			.otherwise({ redirectTo: '/' }); 

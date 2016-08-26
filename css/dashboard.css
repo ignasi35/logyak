@@ -3,9 +3,17 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+
+html
+{
+  position: relative; 
+  min-height: 100%;
+}
+
 body {
   padding-top: 50px;
-  
+  padding-bottom: 70px;
+
 }
 
 
@@ -21,7 +29,7 @@ body {
 }
 
 #editButton {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-top: 5px;
   margin-top: 20px;
   margin-left: 40px
@@ -132,20 +140,31 @@ body {
     margin-left: 30px;
 }
 
+dl {
+    margin-left: 30px;
+}
+
 .footer {
-  color: white;
+  color: #9d9d9d;
   margin: 0 auto;
   background-color: black;
-  padding-top: 20px;
-  padding-bottom: 20px;
+/*  padding-top: 20px;
+  padding-bottom: 20px;*/
   margin: 0 auto;
+  width: 100%;
+  bottom: 0px;
+  z-index: 0;
+  position: absolute; 
+  padding: 20px;
+  text-align: center;
+}
 
 }
 
-.footer p {
+/*.footer p {
   text-align: center;
   color: #9d9d9d;
-}
+}*/
 
 
 
@@ -201,5 +220,13 @@ body {
 #excursionForm button {
   margin-left: 0.5em;
 }
+
+#links a img{
+
+    max-width: 100px;
+    max-height: 100px;
+
+}
+
 
 
