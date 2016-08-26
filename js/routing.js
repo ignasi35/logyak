@@ -12,7 +12,7 @@ angular.module ("logyakConfig",[])
 				controller: 'ExcursionDetailsCtrl'
 			})
 
-			.when('/editExcursion', {
+			.when('/createExcursion', {
 				templateUrl: 'templates/excursionDetailForm.html'
 			})
 
