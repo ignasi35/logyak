@@ -159,11 +159,37 @@ dl {
   text-align: center;
 }
 
-#links a img {
-    max-width: 100px;
-    max-height: 100px;
+/*#links a img {
+    max-width: 100%;
+    max-height: 100%;
+}*/
+
+
+/*CSS for thumbnail image gallery*/
+.thumbnailPhotoGallery {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: inline-block;
+}
+.thumbnailPhotoGallery img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.thumbnailPhotoGallery img.portrait {
+  width: 100%;
+  height: auto;
 }
 
+
+/*CSS for form Crete New Excursion*/
 
 .well {
     -webkit-box-shadow: none;
