@@ -43,26 +43,50 @@
                      <input class="form-control" id="id_site" name="site" placeholder="" type="url" />
                   </div>
 
+<!--                   <div class="form-group">
+                    <label>Attendees: </label>
+                      <div ng-dropdown-multiselect="" extra-settings="dropdownSetting" 
+                     options="Categories" selected-model="CategoriesSelected" checkboxes="true"></div>
+                  </div> -->
+
                   <div class="form-group">
-                     <label > Attendees </label>
-                     <input class="form-control" id="id_site" name="site" placeholder="" type="url" />
-                  </div>
+                    <label class="control-label" for="selectbasic">Attendees</label>
+
+                        <select id="selectbasic" name="selectbasic" class="form-control">
+                          <option value="1">Attendee1</option>
+                          <option value="2">Attendee2</option>
+                          <option value="2">Attendee3</option>
+                        </select>
+
+                    </div>
+
 
                   <div class="form-group">
                     <label> Notes </label>
                      <textarea class="form-control" cols="40" id="id_mensagem" name="" placeholder="" rows="10">
                      </textarea>
                   </div>
-
                   <div class="form-group">
-                    <label > Links </label>
+                     <label > Links </label>
                      <textarea class="form-control" cols="40" id="id_mensagem" name="mensagem" placeholder="Links of interest" rows="10">
                      </textarea>
                   </div>
 
+                  <div class="form-group">
+                    <label>Upload Images</label>
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <span class="btn btn-default btn-file"  id="btn-file">
+                        <small>Browse… </small><input type="file" id="imgInp">
+                        </span>
+                      </span>
+                      <input type="text" class="form-control" readonly>
+                    </div>
+                      <img id='img-upload'/>
+                     </div>
+
                   <button type="submit" class="btn btn-default">Send</button>
                </form>
-
          </div>
       </div>
    </div>
@@ -70,7 +94,7 @@
 
 
 
-<h3 class="sub-header" id="picturesTitle">Pictures</h3>
+
 
 
 
