@@ -159,74 +159,58 @@ dl {
   text-align: center;
 }
 
-}
-
-/*.footer p {
-  text-align: center;
-  color: #9d9d9d;
-}*/
-
-
-
-#excursionForm {
-    /* Just to center the form on the page */
-    margin-left: 10px;
-    width: 600px;
-}
-
-
-#excursionForm div + div {
-    margin-top: 0em;
-}
-
-#excursionForm label {
-    /* To make sure that all labels have the same size and are properly aligned */
-    display: inline-block;
-    width: 150px;
-    text-align: right;
-}
-
-#excursionForm input, textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, textareas have a monospace font */
-    font: 1em sans-serif;
-
-    /* To give the same size to all text field */
-    width: 300px;
-    /*-moz-box-sizing: border-box;
-    box-sizing: border-box;*/
-
-    /* To harmonize the look & feel of text field border */
-    border: 1px solid #999;
-}
-
-#excursionForm input:focus, textarea:focus {
-    /* To give a little highlight on active elements */
-    border-color: #000;
-}
-
-#excursionForm textarea {
-    /* To properly align multiline text fields with their labels */
-    vertical-align: top;
-
-    /* To give enough room to type some text */
-    height: 5em;
-
-    /* To allow users to resize any textarea vertically
-       It does not work on all browsers */
-    resize: vertical;
-}
-
-#excursionForm button {
-  margin-left: 0.5em;
-}
-
-#links a img{
-
+#links a img {
     max-width: 100px;
     max-height: 100px;
-
 }
 
+
+.well {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+.btn {
+    border-width: 2px;
+}
+.btn-default {
+    color: #ffffff;
+    background-color: #95a5a6;
+    border-color: #95a5a6;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#titleForm {
+  text-align: left;
+}
 
 

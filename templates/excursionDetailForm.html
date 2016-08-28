@@ -3,62 +3,75 @@
     <img src="../img/logo_group.jpg" class="logoGroup"></src>
   </div>
   <div class="col-xs-10">
-    <h2 class="sub-header" id="sub-header">Create Excursion Kayak Group</h2>
+    <h2 class="sub-header" id="sub-header">Create an excursion  - Kayak Group</h2>
   </div>
 </div>
 
-<div class="responsive">
+<div class="container"> 
+   <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+         <div class="well ">
+            <form action="" method="post">
+               <input type='hidden' name='csrfmiddlewaretoken' value='jirY00s8p1JmoEVdHSHBrH4rXryWR0jU'/>
+                  <div class="form-group">
+                     <label> Excursion name </label>
+                     <input class="form-control" id="id_nome" maxlength="100" name="nome" placeholder="" type="text" />
+                  </div>
 
-  <form action="/excursionDetail#?" method="post" class="dl-horizontal" id="excursionForm">
-    <div>
-      <label for="id">id:</label>
-      <!-- <input type="text" id="idExcursion" name="excursion_id" /> -->
-      <span>this-is-my-id</span>
-    </div>
-    <div>
-      <label for="excursion">Excursion:</label>
-      <input type="text" id="excursionName" name="excursion_name" />
-    </div>
-    <div>
-      <label for="date">Date:</label>
-      <input type="text" id="excursionDate" name="excursion_date" />
-    </div>
-    <div>
-      <label for="distance">Distance (mn):</label>
-      <input type="text" id="excursionDistance" name="excursion_distance" />
-    </div>
-    <div>
-      <label for="time">Time:</label>
-      <input type="text" id="excursionTime" name="excursion_time" />
-    </div>
-    <div>
-      <label for="seaConditions">Sea conditions:</label>
-      <input type="text" id="seaConditions" name="sea_conditions" />
-    </div>
-    <div>
-      <label for="attendees">Attendees:</label>
-      <input type="text" id="attendees" name="attendees" />
-    </div>
-    <div>
-      <label for="notes">Notes:</label>
-      <textarea id="notes" name="sherpa_notes"></textarea>
-    </div>
-    <div class="button">
-     <button type="submit">Update</button>
-    </div>
-  </form>
+                  <div class="form-group">
+                     <label> Date </label>
+                     <input class="form-control" id="id_email" name="email" placeholder="" type="email" />
+                  </div>
+
+                  <div class="form-group">
+                     <label> Distance </label>
+                     <input class="form-control" id="id_assunto" maxlength="100" name="assunto" placeholder="" type="text" />
+                  </div>
+
+                   <div class="form-group">
+                     <label > Time </label>
+                     <input class="form-control" id="id_site" name="site" placeholder="Including breaks" type="url" />
+                  </div>
+
+                  <div class="form-group">
+                     <label > Wind force </label>
+                     <input class="form-control" id="id_site" name="site" placeholder="in BFT" type="url" />
+                  </div>
+
+                  <div class="form-group">
+                     <label > Sea conditions </label>
+                     <input class="form-control" id="id_site" name="site" placeholder="" type="url" />
+                  </div>
+
+                  <div class="form-group">
+                     <label > Attendees </label>
+                     <input class="form-control" id="id_site" name="site" placeholder="" type="url" />
+                  </div>
+
+                  <div class="form-group">
+                    <label> Notes </label>
+                     <textarea class="form-control" cols="40" id="id_mensagem" name="" placeholder="" rows="10">
+                     </textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label > Links </label>
+                     <textarea class="form-control" cols="40" id="id_mensagem" name="mensagem" placeholder="Links of interest" rows="10">
+                     </textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-default">Send</button>
+               </form>
+
+         </div>
+      </div>
+   </div>
 </div>
+
 
 
 <h3 class="sub-header" id="picturesTitle">Pictures</h3>
 
 
-<div class="linksOfInterest">
-  <h3 class="sub-header">Links</h3>
-  <textarea id="notes" name="sherpa_notes"></textarea>
-  <!-- <a href= "httpasdfkjansdkf">Ernesto's pictures</a> -->
-  <div class="button">
-    <button type="submit">Update</button>
-  </div>
-</div>
+
 
