@@ -13,15 +13,14 @@
 
     <title>Excursions Page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Bootstrap Image Gallery -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="imageGallery/css/bootstrap-image-gallery.min.css">
+    
 
-    <!-- Custom styles for this template -->
+    <!-- LOCAL CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-image-gallery.css" rel="stylesheet" >
     <link href="css/dashboard.css" rel="stylesheet">
 
   </head>
@@ -60,7 +59,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <p class="messageFooter" ng-controller="FooterQuoteController"> {{quote}} </p>
+      <p class="messageFooter" ng-controller="QuoteController"> {{quote}} </p>
     </footer>
 
 
@@ -73,7 +72,7 @@
 
     <!-- Bootstrap Image Gallery-->
     <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    <script src="imageGallery/js/bootstrap-image-gallery.min.js"></script>
+    <script src="../js/bootstrap-image-gallery.min.js"></script>
 
     <!-- Angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.js"></script>
@@ -82,17 +81,19 @@
 
     <!-- Custom JavaScript-->
     
-    <script src='js/services/_moduleLogyakServices.js'></script>
-    <script src='js/services/DataExcursionService.js'></script>
-    <script src='js/services/FooterQuoteService.js'></script>
+    <script src='app/servicesModule.js'></script>
+    <script src='app/controllersModule.js'></script>
+
+    <script src='app/list/service.js'></script>
+    <script src='app/list/controller.js'></script>
+
+    <script src='app/details/controller.js'></script>
+
+    <script src='app/quotes/service.js'></script>
+    <script src='app/quotes/controller.js'></script>
     
-    <script src='js/controllers/_moduleLogyakControllers.js'></script>
-    <script src='js/controllers/ExcursionsListCtrl.js'></script>
-    <script src='js/controllers/ExcursionDetailsCtrl.js'></script>
-    <script src='js/controllers/FooterQuoteController.js'></script>
-    
-    <script src='js/app.js'></script>
-    <script src='js/routing.js'></script>
+    <script src='app/app.js'></script>
+    <script src='app/routing.js'></script>
 
   </body>
 </html>

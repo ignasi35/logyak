@@ -3,17 +3,17 @@ angular.module ("logyakConfig",[])
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'templates/excursionsList.html',
+				templateUrl: '/app/list/template.html',
 				controller: 'ExcursionsListCtrl'
 			})
 
 			.when('/excursion/:id', {
-				templateUrl: 'templates/excursionDetails.html',
+				templateUrl: '/app/details/template.html',
 				controller: 'ExcursionDetailsCtrl'
 			})
 
 			.when('/createExcursion', {
-				templateUrl: 'templates/excursionDetailForm.html'
+				templateUrl: '/app/create/template.html'
 			})
 
 			.otherwise({ redirectTo: '/' }); 

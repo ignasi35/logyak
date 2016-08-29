@@ -1,9 +1,9 @@
 angular.module('logyakServices')
-	.factory('FooterQuoteService',function( $http ) {
+	.factory('QuoteService',function( $http ) {
 		
 		function getFooterQuotes() {
 			return $http
-				.get('/json/footerQuotes.json')
+				.get('../json/quotes.json')
 				.then( function(httpQuotes){
 					return httpQuotes.data;
 				}); // returns a promise

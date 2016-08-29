@@ -1,5 +1,5 @@
 angular.module('logyakControllers')
-	.controller('FooterQuoteController', function( $scope, FooterQuoteService ) {
+	.controller('QuoteController', function( $scope, QuoteService ) {
 		
 		$scope.quote = "";
 
@@ -10,7 +10,7 @@ angular.module('logyakControllers')
 			return arrayOfQuotes[ n % divisor ];
 		}
 
-		FooterQuoteService.getFooterQuotes()
+		QuoteService.getFooterQuotes()
 			.then( function(arrayOfQuotes) {
 				console.log("in controller: " + arrayOfQuotes);
 				$scope.quote = randomQuote(arrayOfQuotes).quote ;
