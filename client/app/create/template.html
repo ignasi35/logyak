@@ -15,39 +15,33 @@
                <input type='hidden' name='csrfmiddlewaretoken' value='jirY00s8p1JmoEVdHSHBrH4rXryWR0jU'/>
                   <div class="form-group">
                      <label> Excursion name </label>
-                     <input class="form-control" id="id_nome" maxlength="100" name="nome" placeholder="" type="text" />
+                     <input class="form-control" maxlength="100" name="nameExcursion" placeholder="" type="text" />
                   </div>
 
                   <div class="form-group">
                      <label> Date </label>
-                     <input class="form-control" id="id_email" name="email" placeholder="" type="email" />
+                     <input class="form-control" maxlength="100" name="dateExcursion" placeholder="" type="text" />
                   </div>
 
                   <div class="form-group">
                      <label> Distance </label>
-                     <input class="form-control" id="id_assunto" maxlength="100" name="assunto" placeholder="" type="text" />
+                     <input class="form-control" maxlength="100" name="distanceExcursion" placeholder="" type="text" />
                   </div>
 
                    <div class="form-group">
                      <label > Time </label>
-                     <input class="form-control" id="id_site" name="site" placeholder="Including breaks" type="url" />
+                     <input class="form-control" name="timeExcursion" maxlength="100" placeholder="Including breaks" type="text" />
                   </div>
 
                   <div class="form-group">
                      <label> Wind force </label>
-                     <input class="form-control" id="id_site" name="site" placeholder="in BFT" type="url" />
+                     <input class="form-control" name="windForceExcursion" maxlength="100" placeholder="in BFT" type="text" />
                   </div>
 
                   <div class="form-group">
                      <label > Sea conditions </label>
-                     <input class="form-control" id="id_site" name="site" placeholder="" type="url" />
+                     <input class="form-control" name="seaConditionsExcursion" maxlength="100" placeholder="" type="text" />
                   </div>
-
-<!--                   <div class="form-group">
-                    <label>Attendees: </label>
-                      <div ng-dropdown-multiselect="" extra-settings="dropdownSetting" 
-                     options="Categories" selected-model="CategoriesSelected" checkboxes="true"></div>
-                  </div> -->
 
                   <div class="form-group">
                     <label class="control-label" for="selectbasic">Attendees</label>
@@ -68,7 +62,7 @@
                   </div>
                   <div class="form-group">
                      <label > Links </label>
-                     <textarea class="form-control" cols="40" id="id_mensagem" name="mensagem" placeholder="Links of interest" rows="10">
+                     <textarea class="form-control" cols="40" name="notesExcursion" placeholder="Links of interest" rows="10">
                      </textarea>
                   </div>
 
