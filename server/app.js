@@ -17,15 +17,18 @@ var ExcursionSchema = new Schema({
 	date: { type: String, required: true },
 	attendees: { type: String, required: true },
 	distance: { type: Number, required: true },
-	time: { type: String, required: true },
+	time: { type: Number, required: true },
 	windForce: { type: Number, required: true },
 	seaConditions: { type: String, required: true },
-	notes: { type: String, required: true }
+	notes: { type: String }
 });
 
 
 // for HTML rendering
 app.use( express.static( path.join( __dirname, '../client' )) );
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 
 // will use the collection -> excursions
@@ -39,42 +42,41 @@ var ExcursionModel = mongoose.model("excursion", ExcursionSchema);
 		})
 	})
 
-	// app.post ('/create', function(req, res) {
-	// 	if (!req.body || !req.body.nameExcursion || !req.body.dateExcursion ||
-	// 	!req.body.attendeesExcursion || !req.body.distanceExcursion || 
-	// 	!req.body.timeExcursion || !req.body.windForceExcursion || 
-	// 	!req.body.seaConditionsExcursion || 
-	// 	!req.body.req.body.notesExcursion) { //in case content is void or there is something that it isn't a name (space, char, etc.)
-	// 		res.send ("something should be reviewed!");
-	// 	}else{
-	// 		var nameExc = req.body.nameExcursion;
-	// 		var dateExc = req.body.dateExcursion;
-	// 		var attendeesExc = req.body.attendeesExcursion;
-	// 		var distanceExc = req.body.distanceExcursion;
-	// 		var timeExc = req.body.timeExcursion;
-	// 		var windForceExc = req.body.windForceExcursion;
-	// 		var seaConditionsExc = req.body.seaConditionsExcursion;
-	// 		var notesExc = req.body.notesExcursion;
+	app.post ('/api/excursions', function(req, res) {
+		if (!req.body || !req.body.nameExcursion || !req.body.dateExcursion ||
+		!req.body.attendeesExcursion || !req.body.distanceExcursion || 
+		!req.body.timeExcursion || !req.body.windForceExcursion || 
+		!req.body.seaConditionsExcursion ) { //in case content is void or there is something that it isn't a name (space, char, etc.)
+			process.stdout.write(req.body.attendeesExcursion);
+			res.send ("something should be reviewed!");
+		}else{
+			var nameExc = req.body.nameExcursion;
+			var dateExc = req.body.dateExcursion;
+			var attendeesExc = req.body.attendeesExcursion;
+			var distanceExc = req.body.distanceExcursion;
+			var timeExc = req.body.timeExcursion;
+			var windForceExc = req.body.windForceExcursion;
+			var seaConditionsExc = req.body.seaConditionsExcursion;
+			var notesExc = req.body.notesExcursion;
 
-	// 		var newExcursion = {
-	// 			id: ++counter,
-	// 			name: nameExc,
-	// 			date: dateExc,
-	// 			attendees: attendeesExc,
-	// 			distance: distanceExc,
-	// 			time: timeExc,
-	// 			windForce: windForceExc,
-	// 			seaConditions: seaConditionsExc,
-	// 			notes: notesExc
-	// 			}
+			var newExcursion = new ExcursionModel({
+				id: 23,
+				name: nameExc,
+				date: dateExc,
+				attendees: attendeesExc,
+				distance: distanceExc,
+				time: timeExc,
+				windForce: windForceExc,
+				seaConditions: seaConditionsExc,
+				notes: notesExc
+				})
 
-	// 		ExcursionModel
-	// 			.insertOne(newExcursion, function(err, result) {
-	// 			if (err) throw err;
-	// 			res.redirect('/list');
-	// 			})
-	// 		}
-	// 	})
+			newExcursion.save( function(err, result) {
+					if (err) throw err;
+					res.redirect('/list');
+				})
+			}
+		})
 
 	app.listen( PORT, function() {
 		console.log( 'Now running on port 8080' );
