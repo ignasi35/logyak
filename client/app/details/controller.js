@@ -11,7 +11,7 @@ angular.module('logyakControllers')
 				// the current ID
 
 				function findExcursion(dataResult) { 
- 					return dataResult.id === excursionId;
+ 					return dataResult.id.toString() === excursionId;
 				}
 
 				// we assing this data to -> $scope.excursion
