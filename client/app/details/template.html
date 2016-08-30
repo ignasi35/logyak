@@ -1,0 +1,151 @@
+<div class="row">
+  <div class="col-xs-2">
+    <img src="/img/_logo/logo_group.jpg" class="logoGroup"></src>
+  </div>
+  <div class="col-xs-10">
+    <h2 class="sub-header" id="sub-header">Detailed Excursion Kayak Group</h2>
+  </div>
+</div>
+
+<div class="responsive">
+  <dl class="dl-horizontal" >
+    <dt>id:</dt>
+    <dd>{{ excursion.id }}</dd>
+    <dt>Excursion:</dt>
+    <dd>{{ excursion.name }}</dd>
+    <dt>Date:</dt>
+    <dd>{{ excursion.date }}</dd>
+    <dt>Distance</dt>
+    <dd>{{ excursion.distance }} mn</dd>
+    <dt>Time:</dt>
+    <dd>{{ excursion.time }}h</dd>
+    <dt>Sea conditions:</dt>
+    <dd>{{excursion.conditions }}</dd>
+    <dt>Attendees:</dt>
+    <dd>{{ excursion.attendees }}</dd>
+    <dt>Notes:</dt>
+    <dd>{{ excursion.notes }}</dd>
+  </dl>
+</div>
+
+<h3 class="sub-header" id="picturesTitle">Pictures</h3>
+
+<div id="links">
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic1.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic1.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayacPic2.jpeg" data-gallery>
+            <img src="/img/01excursion/kayacPic2.jpeg" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic3.jpeg" data-gallery>
+            <img src="/img/01excursion/kayakPic3.jpeg" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic5.jpg" data-gallery>
+          <img src="/img/01excursion/kayakPic5.jpg" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic6.jpg" data-gallery>
+         <img src="/img/01excursion/kayakPic6.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic7.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic7.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic8.jpg" data-gallery>
+          <img src="/img/01excursion/kayakPic8.jpg" class="portrait" alt="Banana">
+        </a> 
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic9.jpg" data-gallery>
+         <img src="/img/01excursion/kayakPic9.jpg" class="portrait" alt="Banana">
+         </a> 
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic5.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic5.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic6.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic6.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic7.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic7.jpg" class="portrait" alt="Banana">
+        </a> 
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic8.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic8.jpg" class="portrait" alt="Banana">
+        </a> 
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic9.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic9.jpg" class="portrait" alt="Banana">
+        </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic10.jpg" data-gallery>
+            <img src="/img/01excursion/kayakPic10.jpg" class="portrait" alt="Banana">
+         </a>
+    </div>
+    <div class="thumbnailPhotoGallery">
+        <a href="img/01excursion/kayakPic11.jpg" data-gallery>
+             <img src="/img/01excursion/kayakPic11.jpg" class="portrait" alt="Banana">
+         </a>
+    </div>
+</div>
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+<!-- The container for the modal slides -->
+<div class="slides"></div>
+<!-- Controls for the borderless lightbox -->
+<h3 class="title"></h3>
+<a class="prev">‹</a>
+<a class="next">›</a>
+<a class="close">×</a>
+<a class="play-pause"></a>
+<ol class="indicator"></ol>
+<!-- The modal dialog, which will be used to wrap the lightbox content -->
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body next"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left prev">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    Previous
+                </button>
+                <button type="button" class="btn btn-primary next">
+                    Next
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="linksOfInterest">
+    <h3 class="sub-header">Links</h3>
+    <a href= "http://www.flickr.com">Ernesto's pictures</a>
+</div>
+
