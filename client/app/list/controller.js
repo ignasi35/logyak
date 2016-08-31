@@ -1,16 +1,19 @@
-angular.module('logyakControllers')
-	.controller('ExcursionsListCtrl', function( $scope, DataExcursionService) {
+function ExcursionsListCtrl( $scope, DataExcursionService ) {
 
-		$scope.excursions = {};
+	console.log("ExcursionsListCtrl....")
+	$scope.excursions = {};
 
-		DataExcursionService.getDataExcursion()
-			.then( function(result) {
-				console.log(result);
-				//promise complete
-				$scope.excursions = result.data;
-			})
-			.catch( function(error) {
-				console.log('error', error)
-			});
-			
-	})
+	DataExcursionService.getDataExcursion()
+		.then( function(result) {
+			console.log(result);
+			//promise complete
+			$scope.excursions = result.data;
+		})
+		.catch( function(error) {
+			console.log('error', error)
+		});
+		
+}
+
+ExcursionsListCtrl.$inject = ['$scope', 'DataExcursionService'];
+module.exports = ExcursionsListCtrl;

@@ -1,6 +1,4 @@
-angular.module ("logyakConfig",[])
-
-	.config(function($routeProvider) {
+function myRouteProvider($routeProvider) {
 		$routeProvider
 			.when('/', {
 				templateUrl: '/app/list/template.html',
@@ -17,4 +15,7 @@ angular.module ("logyakConfig",[])
 			})
 
 			.otherwise({ redirectTo: '/' }); 
-	})
+}
+
+myRouteProvider.$inject = ['$routeProvider'];
+module.exports = myRouteProvider;
