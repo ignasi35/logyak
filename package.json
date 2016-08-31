@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/app",
-    "start": "node server/app",
+    "dev" : "nodemon server/app",
+    "start" : "node server/app",
+    "build:client": "browserify client/app > client/bundle.js",
+    "build:client:watch": "watchify client/app -d -o client/bundle.js -v",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engine" : {
@@ -23,9 +25,15 @@
   },
   "homepage": "https://github.com/avilatusell/logyak#readme",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "browserify": "^13.1.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.9",
     "mongoose": "^4.5.10"
+  },
+  "devDependencies": {
+    "watchify": "^3.7.0"
   }
 }

@@ -1,5 +1,4 @@
-angular.module('logyakControllers')
-	.controller('QuoteController', function( $scope, QuoteService ) {
+function QuoteController( $scope, QuoteService ) {
 		
 		$scope.quote = "";
 
@@ -20,7 +19,10 @@ angular.module('logyakControllers')
 				console.log('error', error);
 			})
 
-	});
+	}
+
+QuoteController.$inject = ['$scope', 'QuoteService'];
+module.exports = QuoteController;
 
 
 
