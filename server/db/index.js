@@ -1,10 +1,13 @@
 // Bring Mongoose into the app 
 var mongoose = require('mongoose'); 
 
+mongoose.Promise = global.Promise;
+
 // Build the connection string 
 var dbURI = process.env.DB_URI; 
 
 // Create the database connection 
+console.log(dbURI)
 mongoose.connect(dbURI); 
 
 var db = mongoose.connection;

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var excursionDef = require('./models/schemas/excursion');
+var excursionDef = require('./schemas/excursion');
 
 var ExcursionSchema = new mongoose.Schema(excursionDef);
 

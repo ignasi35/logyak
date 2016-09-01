@@ -1,4 +1,4 @@
-var myExcursion = require ('./models/Excursion')
+var myExcursion = require ('../../models/Excursion')
 
 function createExcursion (req, res) {
 	if (!req.body || !req.body.nameExcursion || !req.body.dateExcursion ||
@@ -35,7 +35,7 @@ function createExcursion (req, res) {
 
 		newExcursion.save( function(err, result) {
 				if (err) throw err;
-				res.redirect('/list');
+				res.redirect('/');
 			})
 		}
 	}

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "DB_URI=http://localhost/logyak nodemon index",
+    "dev" : "DB_URI=mongodb://localhost/logyak nodemon index",
     "start" : "node index",
     "build:client": "browserify client/app > client/bundle.js",
     "build:client:watch": "watchify client/app -d -o client/bundle.js -v",

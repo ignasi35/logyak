@@ -1,4 +1,4 @@
-var ExcursionModel = require("./models/Excursion");
+var ExcursionModel = require("../../models/Excursion");
 
 function getAllExcursions (req,res) {
 	ExcursionModel.find({}).sort({date: -1}).exec(function(err, excursions) {
