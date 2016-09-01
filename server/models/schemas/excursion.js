@@ -1,4 +1,4 @@
-var excursion = {
+var excursionSchema = {
 	id: { type: Number, required: true },
 	name: { type: String, required: true },
 	date: { type: String, required: true },
@@ -10,4 +10,4 @@ var excursion = {
 	notes: { type: String }
 };
 
-module.exports = excursion;
+module.exports = excursionSchema;

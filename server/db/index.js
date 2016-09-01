@@ -1,5 +1,5 @@
 // Bring Mongoose into the app 
-var mongoose = require( 'mongoose' ); 
+var mongoose = require('mongoose'); 
 
 // Build the connection string 
 var dbURI = process.env.DB_URI; 
