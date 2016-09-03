@@ -231,6 +231,10 @@ dl {
     user-select: none;
 }
 
+.form-control-feedback{
+  right: 10px;
+}
+
 #titleForm {
   text-align: left;
 }
