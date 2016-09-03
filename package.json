@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "DB_URI=mongodb://localhost/logyak nodemon index",
-    "start" : "node index",
+    "dev": "DB_URI=mongodb://localhost/logyak nodemon index",
+    "start": "node index",
     "build:client": "browserify client/app > client/bundle.js",
     "build:client:watch": "watchify client/app -d -o client/bundle.js -v",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engine" : {
+  "engine": {
     "node": "4.4.7"
   },
   "repository": {
@@ -27,8 +27,9 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "browserify": "^13.1.0",
+    "aws-sdk": "^2.5.5",
     "body-parser": "^1.15.2",
+    "browserify": "^13.1.0",
     "express": "^4.14.0",
     "mongodb": "^2.2.9",
     "mongoose": "^4.5.10"
