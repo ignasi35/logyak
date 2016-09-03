@@ -19,8 +19,10 @@
     <dd>{{ excursion.distance }} mn</dd>
     <dt>Time:</dt>
     <dd>{{ excursion.time }}h</dd>
+    <dt>Wind force:</dt>
+    <dd>{{ excursion.windForce }}</dd>
     <dt>Sea conditions:</dt>
-    <dd>{{excursion.conditions }}</dd>
+    <dd>{{ excursion.seaConditions }}</dd>
     <dt>Attendees:</dt>
     <dd>{{ excursion.attendees }}</dd>
     <dt>Notes:</dt>
@@ -146,6 +148,6 @@
 
 <div class="linksOfInterest">
     <h3 class="sub-header">Links</h3>
-    <a href= "http://www.flickr.com">Ernesto's pictures</a>
+    <a href="{{ excursion.links }}"> {{ excursion.links }} </a>
 </div>
 

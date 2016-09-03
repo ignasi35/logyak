@@ -20,6 +20,7 @@ function createExcursion (req, res) {
 		var windForceExc = req.body.windForceExcursion;
 		var seaConditionsExc = req.body.seaConditionsExcursion;
 		var notesExc = req.body.notesExcursion;
+		var linksExc = req.body.linksExcursion;
 
 		var newExcursion = new myExcursion({
 			id: 23,  //to be reviewed. ID must be set automatically
@@ -30,7 +31,8 @@ function createExcursion (req, res) {
 			time: timeExc,
 			windForce: windForceExc,
 			seaConditions: seaConditionsExc,
-			notes: notesExc
+			notes: notesExc,
+			links: linksExc
 			})
 
 		newExcursion.save( function(err, result) {
