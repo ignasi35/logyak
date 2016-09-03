@@ -1,4 +1,4 @@
-var myExcursion = require ('../../models/Excursion')
+var myExcursion = require ('../../models/Excursion');
 
 function createExcursion (req, res) {
 	if (!req.body || !req.body.nameExcursion || !req.body.dateExcursion ||
@@ -32,7 +32,8 @@ function createExcursion (req, res) {
 			windForce: windForceExc,
 			seaConditions: seaConditionsExc,
 			notes: notesExc,
-			links: linksExc
+			links: linksExc,
+			pictures: []
 			})
 
 		newExcursion.save( function(err, result) {

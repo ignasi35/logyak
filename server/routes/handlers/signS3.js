@@ -1,6 +1,7 @@
 var aws = require('aws-sdk');
 
 var AWS_S3_BUCKET = process.env.AWS_S3_BUCKET;
+aws.config.update( { region : "eu-west-1" } );
 
 function signS3 (req,res) {
   var s3 = new aws.S3();
