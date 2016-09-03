@@ -271,5 +271,7 @@ dl {
   padding-top: 6px;
 }
 
-
+#notes {
+  height: 50px;
+}
 
