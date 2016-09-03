@@ -1,9 +1,12 @@
+<!-- Header -->
 <div class="row">
 	<div class="col-xs-12">
 		<h2 class="sub-header" id="sub-header">{{ excursion.name }} ({{ excursion.date }})</h2>
 	</div>
 </div>
+<!-- /Header -->
 
+<!-- Excursion Details -->
 <div class="responsive">
 	<dl class="dl-horizontal" >
 		<dt>Distance:</dt>
@@ -18,19 +21,23 @@
 		<dd>{{ excursion.notes }}</dd>
 	</dl>
 </div>
+<!-- /Excursion Details -->
 
+<!-- Attendees -->
 <h3 class="sub-header" id="picturesTitle">Attendees</h3>
-	<div class="radio">
-	  <label><input type="radio" name="optradio">Ignasi</label>
-	</div>
-	<div class="radio">
-	  <label><input type="radio" name="optradio">Anna</label>
-	</div>
-	<div class="radio disabled">
-	  <label><input type="radio" name="optradio">Francesc</label>
-	</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">Ignasi</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">Anna</label>
+</div>
+<div class="radio disabled">
+  <label><input type="radio" name="optradio">Francesc</label>
+</div>
+<!-- /Attendees -->
 
 
+<!-- Uplading Pictures -->
 <h3 class="sub-header" id="picturesTitle">Pictures</h3>
 
 <div>
@@ -39,88 +46,20 @@
 		<input type="file" id="uploadFileToExcursion" name="{{ excursion.id }}" />
 	</div>
 </div>
+<!-- /Uplading Pictures -->
 
-
+<!-- Photo Gallery -->
 <div id="links">
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic1.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic1.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayacPic2.jpeg" data-gallery>
-						<img src="/img/01excursion/kayacPic2.jpeg" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic3.jpeg" data-gallery>
-						<img src="/img/01excursion/kayakPic3.jpeg" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic5.jpg" data-gallery>
-					<img src="/img/01excursion/kayakPic5.jpg" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic6.jpg" data-gallery>
-				 <img src="/img/01excursion/kayakPic6.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic7.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic7.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic8.jpg" data-gallery>
-					<img src="/img/01excursion/kayakPic8.jpg" class="portrait" alt="Banana">
-				</a> 
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic9.jpg" data-gallery>
-				 <img src="/img/01excursion/kayakPic9.jpg" class="portrait" alt="Banana">
-				 </a> 
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic5.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic5.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic6.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic6.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic7.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic7.jpg" class="portrait" alt="Banana">
-				</a> 
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic8.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic8.jpg" class="portrait" alt="Banana">
-				</a> 
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic9.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic9.jpg" class="portrait" alt="Banana">
-				</a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic10.jpg" data-gallery>
-						<img src="/img/01excursion/kayakPic10.jpg" class="portrait" alt="Banana">
-				 </a>
-		</div>
-		<div class="thumbnailPhotoGallery">
-				<a href="img/01excursion/kayakPic11.jpg" data-gallery>
-						 <img src="/img/01excursion/kayakPic11.jpg" class="portrait" alt="Banana">
-				 </a>
-		</div>
+	<a ng-href="{{ picture.url }}" ng-repeat="picture in excursion.pictures" data-gallery>
+		<figure class="thumbnailPhotoGallery" >
+			<img ng-src="{{ picture.url }}"/>
+		</figure>
+	</a>
 </div>
+<!-- /Photo Gallery -->
 
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 
+<!-- Bootstrap Image Gallery lightbox -->
 <div id="blueimp-gallery" class="blueimp-gallery">
 <!-- The container for the modal slides -->
 <div class="slides"></div>
@@ -131,6 +70,7 @@
 <a class="close">×</a>
 <a class="play-pause"></a>
 <ol class="indicator"></ol>
+
 <!-- The modal dialog, which will be used to wrap the lightbox content -->
 <div class="modal fade">
 		<div class="modal-dialog">
@@ -154,10 +94,13 @@
 		</div>
 	</div>
 </div>
+<!-- /Bootstrap Image Gallery lightbox -->
 
+<!-- Links of interest -->
 <div class="linksOfInterest">
 		<h3 class="sub-header">Links</h3>
 		<a href="{{ excursion.links }}"> {{ excursion.links }} </a>
 </div>
+<!-- /Links of interest -->
 
 <script src="/app/details/inputFile.js"></script>

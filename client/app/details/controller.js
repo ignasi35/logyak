@@ -3,6 +3,7 @@ function ExcursionDetailsCtrl( $scope,  $routeParams, DataExcursionService) {
 	var excursionId = $routeParams.id;
 	$scope.excursion = {};
 
+
 	DataExcursionService.getDataExcursion()
 		.then( function(result) {
 
@@ -16,7 +17,6 @@ function ExcursionDetailsCtrl( $scope,  $routeParams, DataExcursionService) {
 			// we assing this data to -> $scope.excursion
 
 			$scope.excursion = result.data.find(findExcursion);
-			console.log($scope.excursion);
 		})
 
 		.catch( function(error) {
