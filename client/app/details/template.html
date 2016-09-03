@@ -1,17 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <h2 class="sub-header" id="sub-header">Detailed Excursion Kayak Group</h2>
+    <h2 class="sub-header" id="sub-header">{{ excursion.name }} ({{ excursion.date }})</h2>
   </div>
 </div>
 
 <div class="responsive">
   <dl class="dl-horizontal" >
-    <dt>id:</dt>
-    <dd>{{ excursion.id }}</dd>
-    <dt>Excursion:</dt>
-    <dd>{{ excursion.name }}</dd>
-    <dt>Date:</dt>
-    <dd>{{ excursion.date }}</dd>
     <dt>Distance</dt>
     <dd>{{ excursion.distance }} mn</dd>
     <dt>Time:</dt>
