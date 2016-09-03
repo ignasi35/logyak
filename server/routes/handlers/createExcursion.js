@@ -23,7 +23,7 @@ function createExcursion (req, res) {
 		var linksExc = req.body.linksExcursion;
 
 		var newExcursion = new myExcursion({
-			id: 23,  //to be reviewed. ID must be set automatically
+			id: dateExc + "-" + nameExc,  //to be reviewed. ID must be set automatically
 			name: nameExc,
 			date: dateExc,
 			attendees: attendeesExc,
