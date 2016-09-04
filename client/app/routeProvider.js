@@ -14,6 +14,11 @@ function myRouteProvider($routeProvider) {
 				templateUrl: '/app/create/template.html'
 			})
 
+			.when('/edit/:id', {
+				templateUrl: '/app/edit/template.html',
+				controller: 'ExcursionEditCtrl'
+			})
+
 			.otherwise({ redirectTo: '/' }); 
 }
 
