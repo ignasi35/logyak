@@ -22,6 +22,6 @@ function attachPicsToExcursion (req,res) {
 
 
 
-}
+};
 
 module.exports = attachPicsToExcursion;

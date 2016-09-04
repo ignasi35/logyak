@@ -20,6 +20,8 @@
 		<dt>Notes:</dt>
 		<dd>{{ excursion.notes }}</dd>
 	</dl>
+
+	<button ng-controller="DeleteExcursionCtrl" ng-click="deleteExcursion()" type="button" class="btn btn-danger" ng-href="#/excursion/{{ excursion.id }}">Delete</button>
 </div>
 <!-- /Excursion Details -->
 
