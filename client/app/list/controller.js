@@ -3,10 +3,8 @@ function ExcursionsListCtrl( $scope, DataExcursionService ) {
 	console.log("ExcursionsListCtrl....")
 	$scope.excursions = {};
 
-	DataExcursionService.getDataExcursion()
+	DataExcursionService.getAllExcursions()
 		.then( function(result) {
-			console.log(result);
-			//promise complete
 			$scope.excursions = result.data;
 		})
 		.catch( function(error) {

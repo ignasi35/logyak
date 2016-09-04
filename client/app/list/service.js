@@ -1,11 +1,22 @@
 function DataExcursionService( $http ) {
 
-	function getDataExcursion() {
-		return $http.get('/api/excursions'); // returns a promise
+	function getAllExcursions() {
+		return $http.get('/api/excursions'); 
 	}
-	// return Excursion Service
+
+	function getOneExcursion(id) {
+		return $http.get('/api/excursions/' + id ); 
+	}
+
+	function updateExcursion(excursion) {
+		return $http.put('/api/excursions/'+ excursion.id, excursion); 
+	}
+
+
 	return {
-		getDataExcursion: getDataExcursion
+		getAllExcursions: getAllExcursions,
+		getOneExcursion: getOneExcursion,
+		updateExcursion: updateExcursion
 	};
 }
 

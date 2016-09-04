@@ -4,8 +4,6 @@ function attachPicsToExcursion (req,res) {
 	var excursionId = req.params.id;
 	var excursionUrl = req.body.imageUrl;
 
-	console.log(excursionUrl)
-
 	Excursions.findOneAndUpdate (
 		{ id: excursionId } , 
 		{ $push: {'pictures': { url: excursionUrl } } },
@@ -16,11 +14,7 @@ function attachPicsToExcursion (req,res) {
 			else {
 				res.sendStatus(204);
 			}
-
-
 	});
-
-
 
 };
 

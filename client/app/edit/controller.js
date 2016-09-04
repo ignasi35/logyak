@@ -1,29 +1,28 @@
-function ExcursionEditCtrl( $scope,  $routeParams, DataExcursionService) {
+function ExcursionEditCtrl( $scope,  $routeParams, $location, DataExcursionService) {
 
 	var excursionId = $routeParams.id;
 	$scope.excursion = {};
 
-
-	DataExcursionService.getDataExcursion()
+	DataExcursionService.getOneExcursion(excursionId)
 		.then( function(result) {
-
-			// logic to filter only the excursion w/ 
-			// the current ID
-
-			function findExcursion(dataResult) { 
-					return dataResult.id.toString() === excursionId;
-			}
-
-			// we assing this data to -> $scope.excursion
-
-			$scope.excursion = result.data.find(findExcursion);
+			$scope.excursion = result.data;
 		})
-
 		.catch( function(error) {
 			console.log('error', error)
 		});
+
+		$scope.update = function(excursion) {
+			DataExcursionService.updateExcursion(excursion)
+				.then( function(result) {
+					$location.path('/excursion/' + excursion.id);
+				})
+				.catch( function(error) {
+					console.log('error', error)
+				});
+
+		};
 		
 }
 
-ExcursionEditCtrl.$inject = ['$scope', '$routeParams', 'DataExcursionService'];
+ExcursionEditCtrl.$inject = ['$scope', '$routeParams', '$location','DataExcursionService'];
 module.exports = ExcursionEditCtrl;

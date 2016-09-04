@@ -9,7 +9,7 @@
     <div class="well ">
 
       <!--DATA FORM-->
-      <form action="/api/excursions" method="post">
+      <form>
 
         <div class="form-group col-md-2 has-feedback has-feedback-left">
            <label> Distance (nm) </label>
@@ -45,7 +45,8 @@
            <textarea id="links" class="form-control" ng-model="excursion.links" placeholder="Links of interest" />
         </div>
 
-        <button type="submit" id="logyakButton" class="btn btn-default">Create</button>
+        <input type="submit" ng-click="update(excursion)" value="Save" class="btn btn-default"/>
+
 
       </form>
       <!--DATA FORM-->

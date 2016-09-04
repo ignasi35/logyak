@@ -1,14 +1,14 @@
 
 function attachImage(url, excursionId) {
   var xhr = new XMLHttpRequest();
-  xhr.open('PUT', '/api/excursions/'+ excursionId );
+  xhr.open('POST', '/api/excursions/' + excursionId + '/pictures' );
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
+      if (xhr.status === 204) {
         // refresh image gallery
       } else {
-        console.log('Could not get signed URL.');
+        console.log('Could not store picture.');
       }
     }
   };
@@ -21,7 +21,6 @@ function uploadFile(file, signedRequest, url, excursionId) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        alert("ok ok ok ");
         attachImage(url, excursionId);
       } else {
         alert('Could not upload file.');
