@@ -13,36 +13,36 @@
 
         <div class="form-group col-md-2 has-feedback has-feedback-left">
            <label> Distance (nm) </label>
-           <input class="form-control" maxlength="10" ng-model="distanceExcursion" placeholder="in nautical miles" type="text" />
+           <input class="form-control" maxlength="10" ng-model="excursion.distance" placeholder="in nautical miles" type="text" />
            <i class="glyphicon glyphicon-globe form-control-feedback"/>
         </div>
 
          <div class="form-group col-md-2 has-feedback has-feedback-left">
            <label > Time (h) </label>
-           <input class="form-control" ng-model="timeExcursion" maxlength="2" placeholder="Including breaks" type="text" />
+           <input class="form-control" ng-model="excursion.time" maxlength="2" placeholder="Including breaks" type="text" />
            <i class="glyphicon glyphicon-time form-control-feedback"/>
         </div>
 
         <div class="form-group col-md-4 has-feedback has-feedback-left">
            <label> Wind force (Bft)</label>
-           <input class="form-control" ng-model="windForceExcursion" maxlength="100" placeholder="in Bft" type="text" />
+           <input class="form-control" ng-model="excursion.windForce" maxlength="100" placeholder="in Bft" type="text" />
            <i class="glyphicon glyphicon-flag form-control-feedback"/>
         </div>
 
         <div class="form-group col-md-4 has-feedback has-feedback-left">
            <label > Sea conditions </label>
-           <input class="form-control" ng-model="seaConditionsExcursion" maxlength="100" placeholder="" type="text" />
+           <input class="form-control" ng-model="excursion.seaConditions" maxlength="100" placeholder="" type="text" />
            <i class="glyphicon glyphicon-warning-sign form-control-feedback"/>
         </div>
 
         <div class="form-group col-md-6">
           <label> Notes </label>
-           <textarea id="notes" class="form-control" ng-model="notesExcursion" placeholder=""/>
+           <textarea id="notes" class="form-control" ng-model="excursion.notes" placeholder=""/>
         </div>
 
         <div class="form-group col-md-6">
            <label > Links </label>
-           <textarea id="links" class="form-control" ng-model="linksExcursion" placeholder="Links of interest" />
+           <textarea id="links" class="form-control" ng-model="excursion.links" placeholder="Links of interest" />
         </div>
 
         <button type="submit" id="logyakButton" class="btn btn-default">Create</button>
