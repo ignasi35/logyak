@@ -1,5 +1,5 @@
 var ExcursionDetailsCtrl = require("./details/controller");
-var DeleteExcursionCtrl = require("./details/deleteController");
+var DeleteExcursionCtrl = require("./delete/controller");
 var ExcursionsListCtrl = require("./list/controller");
 var QuoteController = require ("./quotes/controller");
 
