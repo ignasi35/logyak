@@ -1,7 +1,16 @@
 var aws = require('aws-sdk');
 
 var AWS_S3_BUCKET = process.env.AWS_S3_BUCKET;
-aws.config.update( { region : "eu-west-1" } );
+var AWS_ACCESS_KEY = process.env.AWS_ACCESS_KEY;
+var AWS_SECRET_KEY = process.env.AWS_SECRET_KEY;
+
+aws.config.update( 
+  { region : "eu-west-1" ,
+    accessKeyId: AWS_ACCESS_KEY, 
+    secretAccessKey: AWS_SECRET_KEY
+  }
+);
+
 
 function signS3 (req,res) {
   var s3 = new aws.S3();
