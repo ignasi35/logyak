@@ -1,9 +1,9 @@
 var express = require('express');
 
 // CRUD Excursion
+var createExcursion  = require('./handlers/createExcursion');
 var getAllExcursions = require('./handlers/getAllExcursions');
 var getOneExcursion  = require('./handlers/getOneExcursion');
-var createExcursion  = require('./handlers/createExcursion');
 var updateExcursion  = require('./handlers/updateExcursion');
 var deleteExcursion  = require('./handlers/deleteExcursion');
 
@@ -18,9 +18,8 @@ var getOneKayaker  = require('./handlers/getOneKayaker');
 
 var router = express.Router();
 
-
-router.get   ('/api/excursions',     getAllExcursions);
 router.post  ('/api/excursions',     createExcursion);
+router.get   ('/api/excursions',     getAllExcursions);
 router.get   ('/api/excursions/:id', getOneExcursion);
 router.put   ('/api/excursions/:id', updateExcursion);
 router.delete('/api/excursions/:id', deleteExcursion);

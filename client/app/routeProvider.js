@@ -11,7 +11,8 @@ function myRouteProvider($routeProvider) {
 			})
 
 			.when('/create', {
-				templateUrl: '/app/create/template.html'
+				templateUrl: '/app/create/template.html',
+				controller: 'CreateExcursionCtrl'
 			})
 
 			.when('/edit/:id', {
@@ -24,11 +25,18 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakersListCtrl'
 			})
 
-			.when('/createKayaker', {
-				templateUrl: '/app/createKayakers/template.html',
+			.when('/kayaker/:kayakerId', {
+				templateUrl: '/app/detailsKayaker/template.html',
+				controller: 'KayakerDetailsCtrl'
 			})
 
-			.otherwise({ redirectTo: '/' }); 
+			.when('/createKayaker', {
+				templateUrl: '/app/createKayakers/template.html',
+				controller: 'CreateExcursionCtrl'
+
+			})
+
+			.otherwise({ redirectTo: '/' });
 }
 
 myRouteProvider.$inject = ['$routeProvider'];

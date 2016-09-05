@@ -8,6 +8,7 @@ angular.module('logyakServices', [])
 	.factory("DataExcursionService", DataExcursionService)
 	.factory("DeleteExcursionService", DeleteExcursionService)
 	.factory("DataKayakersService", DataKayakersService)
+	
 	.factory('QuoteService',QuoteService)
 
 module.exports = "logyakServices";

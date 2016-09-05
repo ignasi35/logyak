@@ -1,5 +1,9 @@
 function DataExcursionService( $http ) {
 
+	function createExcursion(formData) {
+		return $http.post('/api/excursions', formData);
+	}
+
 	function getAllExcursions() {
 		return $http.get('/api/excursions'); 
 	}
@@ -12,8 +16,8 @@ function DataExcursionService( $http ) {
 		return $http.put('/api/excursions/'+ excursion.id, excursion); 
 	}
 
-
 	return {
+		createExcursion: createExcursion,
 		getAllExcursions: getAllExcursions,
 		getOneExcursion: getOneExcursion,
 		updateExcursion: updateExcursion

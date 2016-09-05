@@ -1,5 +1,6 @@
 function ExcursionEditCtrl( $scope,  $routeParams, $location, DataExcursionService) {
 
+/// inicialitzacio
 	var excursionId = $routeParams.id;
 	$scope.excursion = {};
 
@@ -11,16 +12,18 @@ function ExcursionEditCtrl( $scope,  $routeParams, $location, DataExcursionServi
 			console.log('error', error)
 		});
 
-		$scope.update = function(excursion) {
-			DataExcursionService.updateExcursion(excursion)
-				.then( function(result) {
-					$location.path('/excursion/' + excursion.id);
-				})
-				.catch( function(error) {
-					console.log('error', error)
-				});
+///  altres metodes
 
-		};
+	$scope.update = function(excursion) {
+		DataExcursionService.updateExcursion(excursion)
+			.then( function(result) {
+				$location.path('/excursion/' + excursion.id);
+			})
+			.catch( function(error) {
+				console.log('error', error)
+			});
+
+	};
 		
 }
 
