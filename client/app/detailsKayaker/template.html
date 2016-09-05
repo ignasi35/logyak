@@ -1,0 +1,39 @@
+<!-- Header -->
+<div class="row">
+	<div class="col-xs-12">
+		<h2 class="sub-header" id="sub-header">{{ kayaker.name }} ({{ kayaker.surname }})</h2>
+	</div>
+</div>
+<!-- /Header -->
+
+<!-- Excursion Details -->
+<div class="responsive">
+	<dl class="dl-horizontal" >
+		<dt>Kayak Material:</dt>
+		<dd>{{ kayaker.kayakMaterial }} mn</dd>
+		<dt>Notes:</dt>
+		<dd>{{ kayaker.notes }} h</dd>
+		<dt>Miles:</dt>
+		<dd>{{ kayaker.miles }}</dd>
+		<dt>Ranking:</dt>
+		<dd>{{ kayaker.ranking }}</dd>
+	</dl>
+
+	<button ng-controller="DeleteKayakerCtrl" ng-click="deleteKayaker()" type="button" class="btn btn-danger" ng-href="#/kayaker/{{ kayaker.username }}">Delete</button>
+     <a class="btn btn-primary" ng-href="#/editKayaker/{{ kayaker.id }}">Edit</a>
+</div>
+<!-- /Excursion Details -->
+
+<!-- Excursions -->
+<!-- <h3 class="sub-header" id="picturesTitle">Excursions</h3> -->
+
+
+<!-- /Excursions -->
+
+<!-- Badges -->
+<!-- <div class="badges">
+		<h3 class="sub-header">Badges</h3>
+		<a href="{{ kayaker.badges }}"> {{ kayaker.badges }} </a>
+</div> -->
+
+<!-- /Badges -->

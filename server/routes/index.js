@@ -11,10 +11,11 @@ var deleteExcursion  = require('./handlers/deleteExcursion');
 var attachPicsToExcursion = require('./handlers/attachPicsToExcursion');
 var signS3 = require('./handlers/signS3');
 
+//CRUD Kayakers
+var getAllKayakers = require('./handlers/getAllKayakers');
 
 
 var router = express.Router();
-
 
 
 router.get   ('/api/excursions',     getAllExcursions);
@@ -22,6 +23,8 @@ router.post  ('/api/excursions',     createExcursion);
 router.get   ('/api/excursions/:id', getOneExcursion);
 router.put   ('/api/excursions/:id', updateExcursion);
 router.delete('/api/excursions/:id', deleteExcursion);
+
+router.get   ('/api/kayakers',       getAllKayakers);
 
 
 router.post('/api/excursions/:id/pictures', attachPicsToExcursion);

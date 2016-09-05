@@ -19,6 +19,11 @@ function myRouteProvider($routeProvider) {
 				controller: 'ExcursionEditCtrl'
 			})
 
+			.when('/listKayakers', {
+				templateUrl: '/app/listKayakers/template.html',
+				controller: 'KayakersListCtrl'
+			})
+
 			.otherwise({ redirectTo: '/' }); 
 }
 
