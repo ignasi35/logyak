@@ -28,6 +28,11 @@ function myRouteProvider($routeProvider) {
 				templateUrl: '/app/createKayakers/template.html',
 			})
 
+                        .when('/kayaker/:kayakerId', {
+                                templateUrl: '/app/detailsKayaker/template.html',
+                                controller: 'KayakerDetailsCtrl'
+                        })
+
 			.otherwise({ redirectTo: '/' }); 
 }
 

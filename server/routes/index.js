@@ -26,7 +26,8 @@ router.put   ('/api/excursions/:id', updateExcursion);
 router.delete('/api/excursions/:id', deleteExcursion);
 
 router.get   ('/api/kayakers',           getAllKayakers);
-router.get   ('/api/kayakers/:username', getAllKayakers);
+router.get   ('/api/kayakers/:username', getOneKayakers);
+
 
 
 router.post('/api/excursions/:id/pictures', attachPicsToExcursion);

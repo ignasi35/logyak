@@ -1,7 +1,7 @@
 function KayakersListCtrl( $scope, DataKayakersService ) {
 
 	console.log("KayakerListCtrl....")
-	$scope.kayakers = {};
+	$scope.kayakers = [];
 
 	DataKayakersService.getAllKayakers()
 		.then( function(result) {
