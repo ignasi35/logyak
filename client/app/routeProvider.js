@@ -24,6 +24,11 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakersListCtrl'
 			})
 
+			.when('/kayaker/:username', {
+				templateUrl: '/app/listKayakers/template.html',
+				controller: 'KayakerDetailsCtrl'
+			})
+
 			.otherwise({ redirectTo: '/' }); 
 }
 

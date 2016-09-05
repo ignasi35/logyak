@@ -4,9 +4,9 @@ function DataKayakersService( $http ) {
 		return $http.get('/api/kayakers'); 
 	}
 
-	// function getOneExcursion(id) {
-	// 	return $http.get('/api/excursions/' + id ); 
-	// }
+	function getOneKayaker(id) {
+		return $http.get('/api/kayakers/' + username ); 
+	}
 
 	// function updateExcursion(excursion) {
 	// 	return $http.put('/api/excursions/'+ excursion.id, excursion); 
@@ -15,7 +15,7 @@ function DataKayakersService( $http ) {
 
 	return {
 		getAllKayakers: getAllKayakers
-		//getOneExcursion: getOneExcursion,
+		getOneKayaker: getOneKayaker,
 		//updateExcursion: updateExcursion
 	};
 }
