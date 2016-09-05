@@ -24,6 +24,10 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakersListCtrl'
 			})
 
+			.when('/createKayaker', {
+				templateUrl: '/app/createKayakers/template.html',
+			})
+
 			.otherwise({ redirectTo: '/' }); 
 }
 

@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h2 class="sub-header" id="sub-header">Create a kayaker - Kayak Group</h2>
+	</div>
+</div>
+
+<div class="container"> 
+	<div class="row">
+		<div class="well ">
+
+			<!--DATA FORM-->
+			<form action="/api/kayakers" method="post">
+
+				<div class="form-group col-md-6">
+					 <label> Kayaker name </label>
+					 <input class="form-control" maxlength="20" name="nameKayaker" placeholder="" type="text" />
+				</div>
+
+				<div class="form-group col-md-6 has-feedback has-feedback-left">
+					 <label> Kayaker Surname </label>
+					 <input class="form-control" maxlength="10" name="surnameKayaker" placeholder="" type="text" />
+
+				</div>
+
+				<div class="form-group col-md-6 has-feedback has-feedback-left">
+					 <label> Kayak Material </label>
+					<textarea id="notes" class="form-control" name="notesExcursion" placeholder=""/>
+					 <i class="glyphicon glyphicon-globe form-control-feedback"/>
+				</div>
+
+				<div class="form-group col-md-6">
+					<label> Notes </label>
+					 <textarea id="notes" class="form-control" name="notesExcursion" placeholder=""/>
+				</div>
+
+				<button type="submit" id="logyakButton" class="btn btn-default">Create</button>
+
+			</form>
+			<!--DATA FORM-->
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
