@@ -1,18 +1,19 @@
-function KayakerDetailsCtrl( $scope,  $routeParams, DataKayakerService) {
+function KayakerDetailsCtrl( $scope,  $routeParams, DataKayakersService) {
 
 	var kayakerId = $routeParams.username;
+	console.log(kayakerId);
 	$scope.kayaker = {};
 
-	DataExcursionService.getOneKayaker(kayakerId)
+	DataKayakersService.getOneKayaker(kayakerId)
 		.then( function(result) {
 			console.log(result.data)
 			$scope.kayaker = result.data;
+
 		})
 		.catch( function(error) {
 			console.log('error', error)
 		});
 		
 }
-
-KayakerDetailsCtrl.$inject = ['$scope', '$routeParams', 'DataKayakerService'];
+KayakerDetailsCtrl.$inject = ['$scope', '$routeParams', 'DataKayakersService'];
 module.exports = KayakerDetailsCtrl;

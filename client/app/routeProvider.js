@@ -25,7 +25,7 @@ function myRouteProvider($routeProvider) {
 			})
 
 			.when('/kayaker/:username', {
-				templateUrl: '/app/listKayakers/template.html',
+				templateUrl: '/app/detailsKayaker/template.html',
 				controller: 'KayakerDetailsCtrl'
 			})
 

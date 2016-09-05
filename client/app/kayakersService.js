@@ -4,7 +4,7 @@ function DataKayakersService( $http ) {
 		return $http.get('/api/kayakers'); 
 	}
 
-	function getOneKayaker(id) {
+	function getOneKayaker(username) {
 		return $http.get('/api/kayakers/' + username ); 
 	}
 
@@ -14,11 +14,12 @@ function DataKayakersService( $http ) {
 
 
 	return {
-		getAllKayakers: getAllKayakers
-		getOneKayaker: getOneKayaker,
+		getAllKayakers: getAllKayakers,
+		getOneKayaker: getOneKayaker
 		//updateExcursion: updateExcursion
 	};
 }
 
 DataKayakersService.$inject = ['$http'];
 module.exports = DataKayakersService;
+
