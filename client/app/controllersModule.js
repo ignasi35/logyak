@@ -5,6 +5,7 @@ var ExcursionsListCtrl   = require("./list/controller");
 
 
 var KayakersListCtrl     = require("./listKayakers/controller");
+var KayakerDetailsCtrl   = require("./detailsKayaker/controller")
 
 var QuoteController      = require ("./quotes/controller");
 
@@ -15,7 +16,9 @@ angular.module('logyakControllers',[])
 	.controller("ExcursionEditCtrl",    ExcursionEditCtrl)
 	.controller("ExcursionsListCtrl",   ExcursionsListCtrl)
 	.controller("KayakersListCtrl",     KayakersListCtrl)
+	.controller("KayakerDetailsCtrl",   KayakerDetailsCtrl)
 	.controller("QuoteController",      QuoteController)
 
 
 module.exports = "logyakControllers";
+
