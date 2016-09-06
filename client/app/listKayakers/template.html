@@ -12,18 +12,20 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>Ranking</th>
+        <th>Miles</th>
         <th>Name</th>
         <th>Surname</th>
-        <th>Kayak material</th>
         <th>Notes</th>
         <th></th>
       </tr>
     </thead>
     <tbody >
       <tr ng-repeat = "kayaker in kayakers">
+        <td>{{kayaker.ranking}}</td>
+        <td>{{kayaker.miles}}</td>
         <td>{{kayaker.name}}</td>
         <td>{{kayaker.surname}}</td>
-        <td>{{kayaker.kayakMaterial}}</td>
         <td>{{kayaker.notes}}</td>
         <td><a class="btn btn-default" ng-href="#/kayaker/{{ kayaker.username }}">See details</a></td>
       </tr>
