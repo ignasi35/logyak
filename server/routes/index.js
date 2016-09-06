@@ -14,6 +14,8 @@ var signS3 = require('./handlers/signS3');
 //CRUD Kayakers
 var getAllKayakers = require('./handlers/getAllKayakers');
 var getOneKayaker  = require('./handlers/getOneKayaker');
+var createKayaker  = require('./handlers/createKayaker');
+var updateKayaker  = require('./handlers/updateKayaker');
 
 
 var router = express.Router();
@@ -24,8 +26,10 @@ router.get   ('/api/excursions/:id', getOneExcursion);
 router.put   ('/api/excursions/:id', updateExcursion);
 router.delete('/api/excursions/:id', deleteExcursion);
 
+router.post  ('/api/kayakers',           createKayaker);
 router.get   ('/api/kayakers',           getAllKayakers);
 router.get   ('/api/kayakers/:username', getOneKayaker);
+router.put   ('/api/kayakers/:username', updateKayaker);
 
 
 

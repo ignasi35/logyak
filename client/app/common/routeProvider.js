@@ -27,6 +27,7 @@ function myRouteProvider($routeProvider) {
 
 			.when('/createKayaker', {
 				templateUrl: '/app/createKayaker/template.html',
+				controller: 'CreateKayakerCtrl'
 			})
 
 			.when('/kayaker/:kayakerId', {

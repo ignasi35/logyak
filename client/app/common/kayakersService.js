@@ -1,5 +1,9 @@
 function DataKayakersService( $http ) {
 
+	function createKayaker(kayakerFormData) {
+		return $http.post('/api/kayakers', kayakerFormData);
+	}
+
 	function getAllKayakers() {
 		return $http.get('/api/kayakers'); 
 	}
@@ -14,9 +18,10 @@ function DataKayakersService( $http ) {
 
 
 	return {
+		createKayaker:  createKayaker,
 		getAllKayakers: getAllKayakers,
-		getOneKayaker: getOneKayaker,
-		updateKayaker: updateKayaker
+		getOneKayaker:  getOneKayaker,
+		updateKayaker:  updateKayaker
 	};
 }
 
