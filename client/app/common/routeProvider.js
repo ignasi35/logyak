@@ -25,7 +25,7 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakersListCtrl'
 			})
 
-			.when('/kayaker/:kayakerId', {
+			.when('/kayaker/:username', {
 				templateUrl: '/app/detailsKayaker/template.html',
 				controller: 'KayakerDetailsCtrl'
 			})

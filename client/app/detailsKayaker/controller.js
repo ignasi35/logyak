@@ -1,7 +1,6 @@
 function KayakerDetailsCtrl( $scope,  $routeParams, DataKayakersService) {
 
-	var kayakerId = $routeParams.kayakerId;
-	console.log(kayakerId);
+	var kayakerId = $routeParams.username;
 	$scope.kayaker = {};
 
 	DataKayakersService.getOneKayaker(kayakerId)

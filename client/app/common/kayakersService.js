@@ -26,7 +26,7 @@ function DataKayakersService( $http ) {
 		getAllKayakers: getAllKayakers,
 		getOneKayaker:  getOneKayaker,
 		updateKayaker:  updateKayaker,
-		deleteKayaker: deleteKayaker
+		deleteKayaker:  deleteKayaker
 	};
 }
 

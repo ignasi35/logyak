@@ -1,6 +1,7 @@
 function DeleteKayakerCtrl($scope, $routeParams, $location, DataKayakersService) {
 
 	$scope.deleteKayaker = function() {
+		console.log('routeParams', $routeParams)
 		var kayakerId = $routeParams.username;
 		console.log(kayakerId);
 

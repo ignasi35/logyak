@@ -2,6 +2,7 @@ var Kayakers = require ('../../models/Kayaker');
 
 function deleteKayaker (req,res) {
 	var kayakerId = req.params.username;
+	console.log(kayakerId);
 
 	console.log("Deleting excursion " + kayakerId)
 
