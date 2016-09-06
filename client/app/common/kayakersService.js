@@ -4,19 +4,19 @@ function DataKayakersService( $http ) {
 		return $http.get('/api/kayakers'); 
 	}
 
-	function getOneKayaker(username) {
-		return $http.get('/api/kayakers/' + username ); 
+	function getOneKayaker(kayakerId) {
+		return $http.get('/api/kayakers/' + kayakerId ); 
 	}
 
-	// function updateExcursion(excursion) {
-	// 	return $http.put('/api/excursions/'+ excursion.id, excursion); 
-	// }
+	function updateKayaker(kayaker) {
+		return $http.put('/api/kayakers/'+ kayaker.username, kayaker); 
+	}
 
 
 	return {
 		getAllKayakers: getAllKayakers,
-		getOneKayaker: getOneKayaker
-		//updateExcursion: updateExcursion
+		getOneKayaker: getOneKayaker,
+		updateKayaker: updateKayaker
 	};
 }
 

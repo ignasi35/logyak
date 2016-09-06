@@ -26,13 +26,18 @@ function myRouteProvider($routeProvider) {
 			})
 
 			.when('/createKayaker', {
-				templateUrl: '/app/createKayakers/template.html',
+				templateUrl: '/app/createKayaker/template.html',
 			})
 
-            .when('/kayaker/:kayakerId', {
-                                templateUrl: '/app/detailsKayaker/template.html',
-                                controller: 'KayakerDetailsCtrl'
-                        })
+			.when('/kayaker/:kayakerId', {
+				templateUrl: '/app/detailsKayaker/template.html',
+				controller: 'KayakerDetailsCtrl'
+			})
+
+			.when('/editKayaker/:username', {
+				templateUrl: '/app/editKayaker/template.html',
+				controller: 'KayakerEditCtrl'
+			})
 
 			.otherwise({ redirectTo: '/' }); 
 }

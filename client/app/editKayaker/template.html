@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2 class="sub-header" id="sub-header">Edit kayaker - {{ kayaker.name }} {{ kayaker.surname }}</h2>
+  </div>
+</div>
+
+<div class="container"> 
+  <div class="row">
+    <div class="well ">
+
+      <!--DATA FORM-->
+      <form>
+
+        <div class="form-group col-md-6">
+           <label> Kayak </label>
+           <textarea id="kayak" class="form-control" ng-model="kayaker.kayak" placeholder=""/>
+        </div>
+
+         <div class="form-group col-md-6">
+           <label > Paddle </label>
+           <textarea id="paddle" class="form-control" ng-model="kayaker.paddle" placeholder=""/>
+        </div>
+
+        <div class="form-group col-md-12">
+          <label> Notes </label>
+           <textarea id="notes" class="form-control" ng-model="kayaker.notes" placeholder=""/>
+        </div>
+
+        <input type="submit" ng-click="update(kayaker)" value="Save" class="btn btn-default"/>
+
+      </form>
+      <!--DATA FORM-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

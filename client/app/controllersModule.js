@@ -6,6 +6,7 @@ var CreateExcursionCtrl  = require("./create/controller");
 
 var KayakersListCtrl     = require("./listKayakers/controller");
 var KayakerDetailsCtrl   = require("./detailsKayaker/controller");
+var KayakerEditCtrl      = require("./editKayaker/controller");
 
 var QuoteController      = require ("./quotes/controller");
 
@@ -20,6 +21,7 @@ angular.module('logyakControllers',[])
 
 	.controller("KayakersListCtrl",     KayakersListCtrl)
 	.controller("KayakerDetailsCtrl",   KayakerDetailsCtrl)
+	.controller("KayakerEditCtrl",      KayakerEditCtrl)
 
 	.controller("QuoteController",      QuoteController)
 
