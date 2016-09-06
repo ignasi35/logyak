@@ -1,4 +1,4 @@
-var myRouteProvider = require ('./routeProvider')
+var myRouteProvider = require ('./common/routeProvider')
 
 angular.module ("logyakConfig",[])
 

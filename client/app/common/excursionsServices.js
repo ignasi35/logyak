@@ -16,11 +16,16 @@ function DataExcursionService( $http ) {
 		return $http.put('/api/excursions/'+ excursion.id, excursion); 
 	}
 
+	function deleteDataExcursion(id) {
+		return $http.delete('/api/excursions/'+id); // returns a promise
+	}
+
 	return {
 		createExcursion: createExcursion,
 		getAllExcursions: getAllExcursions,
 		getOneExcursion: getOneExcursion,
-		updateExcursion: updateExcursion
+		updateExcursion: updateExcursion,
+		deleteDataExcursion : deleteDataExcursion
 	};
 }
 

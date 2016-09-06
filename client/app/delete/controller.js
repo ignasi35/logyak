@@ -1,10 +1,10 @@
-function DeleteExcursionCtrl($scope, $routeParams, $location, DeleteExcursionService) {
+function DeleteExcursionCtrl($scope, $routeParams, $location, DataExcursionService) {
 
 	$scope.deleteExcursion = function() {
 		var excursionId = $routeParams.id;
 		console.log(excursionId);
 
-		DeleteExcursionService.deleteDataExcursion(excursionId)
+		DataExcursionService.deleteDataExcursion(excursionId)
 			.then( function(result) {
 				$location.path('/');
 			})
@@ -15,5 +15,5 @@ function DeleteExcursionCtrl($scope, $routeParams, $location, DeleteExcursionSer
 
 }
 
-DeleteExcursionCtrl.$inject = ['$scope', '$routeParams', '$location', 'DeleteExcursionService'];
+DeleteExcursionCtrl.$inject = ['$scope', '$routeParams', '$location', 'DataExcursionService'];
 module.exports = DeleteExcursionCtrl;

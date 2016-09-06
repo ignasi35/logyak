@@ -11,7 +11,8 @@ function myRouteProvider($routeProvider) {
 			})
 
 			.when('/create', {
-				templateUrl: '/app/create/template.html'
+				templateUrl: '/app/create/template.html',
+				controller: 'CreateExcursionCtrl'
 			})
 
 			.when('/edit/:id', {
@@ -28,7 +29,7 @@ function myRouteProvider($routeProvider) {
 				templateUrl: '/app/createKayakers/template.html',
 			})
 
-                        .when('/kayaker/:kayakerId', {
+            .when('/kayaker/:kayakerId', {
                                 templateUrl: '/app/detailsKayaker/template.html',
                                 controller: 'KayakerDetailsCtrl'
                         })
