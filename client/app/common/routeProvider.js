@@ -5,6 +5,10 @@ function myRouteProvider($routeProvider) {
 				controller: 'ExcursionsListCtrl'
 			})
 
+			.when('/home', {
+				templateUrl: '/app/home/home.html'
+			})
+
 			.when('/excursion/:id', {
 				templateUrl: '/app/details/template.html',
 				controller: 'ExcursionDetailsCtrl'
