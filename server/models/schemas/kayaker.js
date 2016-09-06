@@ -3,8 +3,9 @@ var kayakerSchema = {
 	surname: { type: String, required: true, trim: true },
 	ranking: { type: Number },
 	miles: { type: Number },
-	username: { type: String, required: true, trim: true },
-	kayakMaterial: { type: String },
+	username: { type: String, trim: true },
+	kayak: { type: String },
+	paddle: { type: String },
 	notes: { type: String }
 };
 
