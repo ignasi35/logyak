@@ -1,11 +1,11 @@
 
 function CreateKayakerCtrl ($scope, $location, DataKayakersService){
-		$scope.formData = {};
+		$scope.kayakerFormData = {};
 
-	$scope.submit = function(formData){
-		console.log(formData);
+	$scope.submit = function(kayakerFormData){
+		console.log(kayakerFormData);
 
-		DataKayakersService.createKayaker(formData)
+		DataKayakersService.createKayaker(kayakerFormData)
 			.then(function(resp) {
 				var id = resp.headers('Location').split('/')[3]; //returns header of put request
 

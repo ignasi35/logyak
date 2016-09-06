@@ -16,6 +16,7 @@ var getAllKayakers = require('./handlers/getAllKayakers');
 var getOneKayaker  = require('./handlers/getOneKayaker');
 var createKayaker  = require('./handlers/createKayaker');
 var updateKayaker  = require('./handlers/updateKayaker');
+var deleteKayaker  = require('./handlers/deleteKayaker');
 
 
 var router = express.Router();
@@ -30,6 +31,7 @@ router.post  ('/api/kayakers',           createKayaker);
 router.get   ('/api/kayakers',           getAllKayakers);
 router.get   ('/api/kayakers/:username', getOneKayaker);
 router.put   ('/api/kayakers/:username', updateKayaker);
+router.delete('/api/kayakers/:username', deleteKayaker);
 
 
 

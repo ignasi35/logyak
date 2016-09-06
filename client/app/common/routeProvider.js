@@ -25,16 +25,16 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakersListCtrl'
 			})
 
-			.when('/createKayaker', {
-				templateUrl: '/app/createKayaker/template.html',
-				controller: 'CreateKayakerCtrl'
-			})
-
 			.when('/kayaker/:kayakerId', {
 				templateUrl: '/app/detailsKayaker/template.html',
 				controller: 'KayakerDetailsCtrl'
 			})
 
+			.when('/createKayaker', {
+				templateUrl: '/app/createKayaker/template.html',
+				controller: 'CreateKayakerCtrl'
+			})
+			
 			.when('/editKayaker/:username', {
 				templateUrl: '/app/editKayaker/template.html',
 				controller: 'KayakerEditCtrl'

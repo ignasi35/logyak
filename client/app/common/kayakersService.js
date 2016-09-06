@@ -16,12 +16,17 @@ function DataKayakersService( $http ) {
 		return $http.put('/api/kayakers/'+ kayaker.username, kayaker); 
 	}
 
+	function deleteKayaker(kayakerId) {
+		return $http.delete('/api/kayakers/' + kayakerId); // returns a promise
+	}
+
 
 	return {
 		createKayaker:  createKayaker,
 		getAllKayakers: getAllKayakers,
 		getOneKayaker:  getOneKayaker,
-		updateKayaker:  updateKayaker
+		updateKayaker:  updateKayaker,
+		deleteKayaker: deleteKayaker
 	};
 }
 
