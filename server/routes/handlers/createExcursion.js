@@ -18,8 +18,9 @@ function createExcursion (req, res) {
 		var notesExc = req.body.notes;
 		var linksExc = req.body.links;
 
-		var tmp = dateExc + "-" + nameExc
-		var id = tmp.replace(/ /g,'_');
+		var creationDate = (new Date())/1000;
+		var mergeNames = dateExc + "-" + nameExc + "-" + creationDate;
+		var id = mergeNames.replace(/ /g,'_');
 
 		var newExcursion = new myExcursion({
 			// detect duplicate 'id' and avoid them (use a random code at the end)
