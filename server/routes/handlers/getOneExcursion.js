@@ -2,10 +2,9 @@ var ExcursionModel = require("../../models/Excursion");
 
 function getOneExcursion (req,res) {
 	var excursionId = req.params.id;
-	console.log('Excursion ID: ', excursionId);
 	ExcursionModel
 		.findOne({id: excursionId})
-		.populate('attendees')
+		.populate( 'attendees' )
 		.exec(function(err, excursion) {
 			if (err) {
 				return console.error(err);

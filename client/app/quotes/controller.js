@@ -16,7 +16,7 @@ function QuoteController( $scope, QuoteService ) {
 				//promise complete
 			})
 			.catch( function(error) {
-				console.log('error', error);
+
 			})
 
 	}

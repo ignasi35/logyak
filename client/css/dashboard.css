@@ -13,6 +13,7 @@ html
 body {
   padding-top: 50px;
   padding-bottom: 70px;
+  font: Arial,sans-serif;
 }
 
 
@@ -86,7 +87,6 @@ body {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
-/*  background-color: #428bca;*/
 }
 
 
@@ -127,7 +127,6 @@ body {
   border-radius: 50%;
 }
 
-
 .linksOfInterest {
   margin-left: 30px;
   margin-bottom: 50px;
@@ -141,14 +140,11 @@ dl {
     margin-left: 30px;
 }
 
-.footer {
+/*.footer {
   color: #9d9d9d;
   font-family: 'Handlee', cursive;
   font-size: 2em;
   margin: 0 auto;
-/*  background-color: black;*/
-/*  padding-top: 20px;
-  padding-bottom: 20px;*/
   margin: 0 auto;
   width: 100%;
   bottom: 0px;
@@ -156,7 +152,7 @@ dl {
   position: absolute; 
   padding: 15px;
   text-align: center;
-}
+}*/
 
 
 /*CSS for thumbnail image gallery*/
@@ -308,6 +304,7 @@ dl {
 #logyakNav {
       background-color: #1A293E;
       opacity: 0.8;
+      height: 51px;
 /*      font-size: 1.3em;
       color : #d2d9e3;
       color : white;*/

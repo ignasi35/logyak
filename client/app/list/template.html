@@ -7,7 +7,6 @@
 	<div class="col-xs-2">
 		 <a class="btn btn-default" id="editButton" ng-href="#/create">New Excursion</a>
 	</div>
-
 </div>
 
 <div class="table-responsive" >
@@ -24,7 +23,9 @@
 			<tr ng-repeat = "excursion in excursions">
 				<td>{{excursion.name}}</td>
 				<td>{{excursion.date}}</td>
-				<td>{{excursion.attendees}}</td>
+				<td>
+						{{ prettyPrint(excursion.attendees) }}
+				</td>
 				<td><a class="btn btn-default" ng-href="#/excursion/{{ excursion.id }}">See details</a></td>
 			</tr>
 		</tbody>

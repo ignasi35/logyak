@@ -18,6 +18,7 @@ function myRouteProvider($routeProvider) {
 			.when('/excursion/:id', {
 				templateUrl: '/app/details/template.html',
 				controller: 'ExcursionDetailsCtrl'
+				// controller: 'AttendeesController'
 			})
 
 			.when('/create', {

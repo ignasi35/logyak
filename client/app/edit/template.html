@@ -47,6 +47,15 @@
            <textarea id="links" class="form-control" ng-model="excursion.links" placeholder="Links of interest" />
         </div>
 
+        <div class="form-group col-md-12">
+           <div><label > Attendees </label></div>
+              <div class="form-group col-md-4">
+                <ul ng-repeat ="kayaker in kayakers">
+                  <li> {{kayaker.name}} {{kayaker.surname}}</li>
+                </ul>
+             </div>
+        </div>
+
         <input type="submit" ng-click="update(excursion)" value="Save" class="btn btn-default"/>
 
 

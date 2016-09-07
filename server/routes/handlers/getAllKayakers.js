@@ -1,10 +1,12 @@
 var KayakerModel = require("../../models/Kayaker");
 
 function getAllKayakers (req,res) {
-	KayakerModel.find({}).exec(function(err, kayakers) {
+	KayakerModel
+		.find({})
+		.exec(function(err, kayakers) {
 		if (err) return console.error(err);
-		res.json(kayakers);
-	});
+			res.json(kayakers);
+		});
 };
 
 module.exports = getAllKayakers;

@@ -37,5 +37,6 @@ angular.module('logyakControllers',[])
 	.controller("BackgroundHomeCtrl",     BackgroundHomeCtrl)
 
 
+
 module.exports = "logyakControllers";
 

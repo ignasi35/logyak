@@ -6,7 +6,6 @@ function ExcursionDetailsCtrl( $scope,  $rootScope, $routeParams, DataExcursionS
 
 	DataExcursionService.getOneExcursion(excursionId)
 		.then( function(result) {
-			console.log(result.data)
 			$scope.excursion = result.data;
 		})
 		.catch( function(error) {
