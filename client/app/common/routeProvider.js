@@ -1,16 +1,16 @@
 function myRouteProvider($routeProvider) {
 		$routeProvider
-			.when('/', {
+			.when('/listExcursions', {
 				templateUrl: '/app/list/template.html',
 				controller: 'ExcursionsListCtrl'
 			})
 
 			.when('/home', {
-				templateUrl: '/app/home/home.html'
+				templateUrl: '/app/home/template.html'
 			})
 
-			.when('/homeuser', {
-				templateUrl: '/app/homeUser/homeUser.html'
+			.when('/homeUser', {
+				templateUrl: '/app/homeUser/template.html'
 			})
 
 			.when('/excursion/:id', {
@@ -48,7 +48,7 @@ function myRouteProvider($routeProvider) {
 				controller: 'KayakerEditCtrl'
 			})
 
-			.otherwise({ redirectTo: '/' }); 
+			.otherwise({ redirectTo: '/homeUser' }); 
 }
 
 myRouteProvider.$inject = ['$routeProvider'];

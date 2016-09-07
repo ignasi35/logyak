@@ -6,7 +6,7 @@ function DeleteExcursionCtrl($scope, $routeParams, $location, DataExcursionServi
 
 		DataExcursionService.deleteDataExcursion(excursionId)
 			.then( function(result) {
-				$location.path('/');
+				$location.path('/listExcursions');
 			})
 			.catch( function(error) {
 				console.log(error);

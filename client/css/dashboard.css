@@ -303,16 +303,17 @@ dl {
 #logyakNav {
       background-color: #1A293E;
       opacity: 0.5;
-      font-size: 1.3em;
+/*      font-size: 1.3em;
       color : #d2d9e3;
+      color : white;*/
 }
 
 /* Changes color of nav bar*/ 
 #logyakNav  {
       background-color: #1A293E;
       opacity: 0.5;
-      font-size: 1.3em;
-      color : #d2d9e3;
+/*      font-size: 1.2em;
+      color : #d2d9e3;*/
 }
 
 
@@ -324,12 +325,13 @@ dl {
 }
 
 #excursionsMenu {
-      color : #d2d9e3;
+      color: white;
+/*      color : #d2d9e3;*/
       margin-top: 5px;
 }
 
 #kayakersMenu {
-      color : #d2d9e3;
+      color : white;
       margin-top: 5px;
 }
 
@@ -343,7 +345,9 @@ dl {
 }
 
 .quoteDay h1{
-  color: #d2d9e3;
+  color: #ecf0f5;
+/*  color: #d4dbe5;*/
+/*  color: #d2d9e3;*/
   font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
@@ -374,21 +378,54 @@ dl {
 
 #loginHome {
     position: fixed;
-    top: 0px;
+    top: 13px;
     bottom: 0;
     right: 2em;
     z-index: 1000;
     display: block;
     padding: 20px;
+
 }
 
-
-
 #login  {
-  color: #d2d9e3;
+  color: white;
   font-family: 'Open Sans', sans-serif;
   height: 1.5em;
   text-align: center;
 }
 
+/*#logout  {
+  color: white;
+  color: #d2d9e3;
+  font-family: 'Open Sans', sans-serif;
+  height: 1.5em;
+  text-align: center;
+}*/
+
+#excursionsNav{
+  color: white;
+  font-size: 1.3em;
+}
+
+#kayakersNav{
+  color: white;
+  font-size: 1.3em;
+}
+
+
+#navbar ul li {
+  padding-top: 5px;
+}
+
+#logout {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+#hiUser {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
 
