@@ -8,6 +8,7 @@ function CreateExcursionCtrl ($scope, $rootScope, $location, DataExcursionServic
 
 		DataExcursionService.createExcursion(formData)
 			.then(function(resp) {
+				console.log('Location: ', resp.headers('Location'))
 				var id = resp.headers('Location').split('/')[3];
 
 				$location.path('/excursion/' + id);
@@ -17,5 +18,5 @@ function CreateExcursionCtrl ($scope, $rootScope, $location, DataExcursionServic
 	}
 }
 
-CreateExcursionCtrl.$inject = ['$scope', '$location', '$rootScope', 'DataExcursionService'];
+CreateExcursionCtrl.$inject = ['$scope', '$rootScope', '$location', 'DataExcursionService'];
 module.exports = CreateExcursionCtrl;
