@@ -1,8 +1,9 @@
-function KayakerEditCtrl( $scope, $routeParams, $location, DataKayakersService) {
+function KayakerEditCtrl( $scope, $routeParams, $rootScope, $location, DataKayakersService) {
 
 /// inicialitzacio
 	var kayakerId = $routeParams.username;
 	$scope.kayaker = {};
+	$rootScope.bgId = 'backgroundSubpages';
 
 	DataKayakersService.getOneKayaker(kayakerId)
 		.then( function(result) {
@@ -27,5 +28,5 @@ function KayakerEditCtrl( $scope, $routeParams, $location, DataKayakersService) 
 		
 }
 
-KayakerEditCtrl.$inject = ['$scope', '$routeParams', '$location','DataKayakersService'];
+KayakerEditCtrl.$inject = ['$scope', '$routeParams', '$rootScope', '$location','DataKayakersService'];
 module.exports = KayakerEditCtrl;

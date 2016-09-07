@@ -1,7 +1,8 @@
-function ExcursionDetailsCtrl( $scope,  $routeParams, DataExcursionService) {
+function ExcursionDetailsCtrl( $scope,  $rootScope, $routeParams, DataExcursionService) {
 
 	var excursionId = $routeParams.id;
 	$scope.excursion = {};
+	$rootScope.bgId = 'backgroundSubpages';
 
 	DataExcursionService.getOneExcursion(excursionId)
 		.then( function(result) {
@@ -14,5 +15,5 @@ function ExcursionDetailsCtrl( $scope,  $routeParams, DataExcursionService) {
 		
 }
 
-ExcursionDetailsCtrl.$inject = ['$scope', '$routeParams', 'DataExcursionService'];
+ExcursionDetailsCtrl.$inject = ['$scope', '$rootScope', '$routeParams', 'DataExcursionService'];
 module.exports = ExcursionDetailsCtrl;

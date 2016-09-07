@@ -1,4 +1,5 @@
-function DeleteKayakerCtrl($scope, $routeParams, $location, DataKayakersService) {
+function DeleteKayakerCtrl($scope, $routeParams, $rootScope, $location, DataKayakersService) {
+	$rootScope.bgId = 'backgroundSubpages';
 
 	$scope.deleteKayaker = function() {
 		console.log('routeParams', $routeParams)
@@ -15,5 +16,5 @@ function DeleteKayakerCtrl($scope, $routeParams, $location, DataKayakersService)
 	}
 }
 
-DeleteKayakerCtrl.$inject = ['$scope', '$routeParams', '$location', 'DataKayakersService'];
+DeleteKayakerCtrl.$inject = ['$scope', '$routeParams', '$rootScope', '$location', 'DataKayakersService'];
 module.exports = DeleteKayakerCtrl;

@@ -1,7 +1,9 @@
-function ExcursionsListCtrl( $scope, DataExcursionService ) {
+function ExcursionsListCtrl( $scope, $rootScope, DataExcursionService ) {
 
 	console.log("ExcursionsListCtrl....")
 	$scope.excursions = {};
+
+	$rootScope.bgId = 'backgroundSubpages';
 
 	DataExcursionService.getAllExcursions()
 		.then( function(result) {
@@ -13,5 +15,5 @@ function ExcursionsListCtrl( $scope, DataExcursionService ) {
 		
 }
 
-ExcursionsListCtrl.$inject = ['$scope', 'DataExcursionService'];
+ExcursionsListCtrl.$inject = ['$scope', '$rootScope', 'DataExcursionService'];
 module.exports = ExcursionsListCtrl;

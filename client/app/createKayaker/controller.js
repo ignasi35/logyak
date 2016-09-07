@@ -1,6 +1,7 @@
 
-function CreateKayakerCtrl ($scope, $location, DataKayakersService){
+function CreateKayakerCtrl ($scope, $location, $rootScope, DataKayakersService){
 		$scope.kayakerFormData = {};
+		$rootScope.bgId = 'backgroundSubpages';
 
 	$scope.submit = function(kayakerFormData){
 		console.log(kayakerFormData);
@@ -16,5 +17,5 @@ function CreateKayakerCtrl ($scope, $location, DataKayakersService){
 	}
 }
 
-CreateKayakerCtrl.$inject = ['$scope', '$location', 'DataKayakersService'];
+CreateKayakerCtrl.$inject = ['$scope', '$location', '$rootScope', 'DataKayakersService'];
 module.exports = CreateKayakerCtrl;

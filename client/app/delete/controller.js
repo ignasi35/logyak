@@ -1,4 +1,5 @@
-function DeleteExcursionCtrl($scope, $routeParams, $location, DataExcursionService) {
+function DeleteExcursionCtrl($scope, $routeParams, $rootScope, $location, DataExcursionService) {
+	$rootScope.bgId = 'backgroundSubpages';
 
 	$scope.deleteExcursion = function() {
 		var excursionId = $routeParams.id;
@@ -15,5 +16,5 @@ function DeleteExcursionCtrl($scope, $routeParams, $location, DataExcursionServi
 
 }
 
-DeleteExcursionCtrl.$inject = ['$scope', '$routeParams', '$location', 'DataExcursionService'];
+DeleteExcursionCtrl.$inject = ['$scope', '$routeParams', '$rootScope', '$location', 'DataExcursionService'];
 module.exports = DeleteExcursionCtrl;

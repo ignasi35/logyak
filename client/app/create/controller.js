@@ -1,6 +1,7 @@
 
-function CreateExcursionCtrl ($scope, $location, DataExcursionService){
+function CreateExcursionCtrl ($scope, $rootScope, $location, DataExcursionService){
 		$scope.formData = {};
+		$rootScope.bgId = 'backgroundSubpages';
 
 	$scope.submit = function(formData){
 		console.log(formData);
@@ -16,5 +17,5 @@ function CreateExcursionCtrl ($scope, $location, DataExcursionService){
 	}
 }
 
-CreateExcursionCtrl.$inject = ['$scope', '$location', 'DataExcursionService'];
+CreateExcursionCtrl.$inject = ['$scope', '$location', '$rootScope', 'DataExcursionService'];
 module.exports = CreateExcursionCtrl;

@@ -13,8 +13,8 @@ html
 body {
   padding-top: 50px;
   padding-bottom: 70px;
-
 }
+
 
 * {
    border: 0px solid red !important;
@@ -285,13 +285,13 @@ dl {
   height: 100%;
   width: auto;
   -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 
 /* Sets picture on home page and backgroun color on other pages*/
-#backgroundBody { 
+#backgroundHome { 
       background: url(../../img/_homePics/homePic1.jpg) no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -299,10 +299,15 @@ dl {
       background-size: cover;
     }
 
+#backgroundSubpages {
+  background-color: white;
+
+}
+
 /* Changes color of nav bar*/
 #logyakNav {
       background-color: #1A293E;
-      opacity: 0.5;
+      opacity: 0.8;
 /*      font-size: 1.3em;
       color : #d2d9e3;
       color : white;*/

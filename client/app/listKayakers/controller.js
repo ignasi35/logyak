@@ -1,7 +1,9 @@
-function KayakersListCtrl( $scope, DataKayakersService ) {
+function KayakersListCtrl( $scope, $rootScope, DataKayakersService ) {
 
 	console.log("KayakerListCtrl....")
 	$scope.kayakers = [];
+
+	$rootScope.bgId = 'backgroundSubpages';
 
 	DataKayakersService.getAllKayakers()
 		.then( function(result) {
@@ -15,5 +17,5 @@ function KayakersListCtrl( $scope, DataKayakersService ) {
 		
 }
 
-KayakersListCtrl.$inject = ['$scope', 'DataKayakersService'];
+KayakersListCtrl.$inject = ['$scope', '$rootScope', 'DataKayakersService'];
 module.exports = KayakersListCtrl;

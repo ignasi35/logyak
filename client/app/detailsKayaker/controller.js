@@ -1,7 +1,8 @@
-function KayakerDetailsCtrl( $scope,  $routeParams, DataKayakersService) {
+function KayakerDetailsCtrl( $scope, $rootScope, $routeParams, DataKayakersService) {
 
 	var kayakerId = $routeParams.username;
 	$scope.kayaker = {};
+	$rootScope.bgId = 'backgroundSubpages';
 
 	DataKayakersService.getOneKayaker(kayakerId)
 		.then( function(result) {
@@ -14,5 +15,5 @@ function KayakerDetailsCtrl( $scope,  $routeParams, DataKayakersService) {
 		});
 		
 }
-KayakerDetailsCtrl.$inject = ['$scope', '$routeParams', 'DataKayakersService'];
+KayakerDetailsCtrl.$inject = ['$scope', '$rootScope','$routeParams', 'DataKayakersService'];
 module.exports = KayakerDetailsCtrl;

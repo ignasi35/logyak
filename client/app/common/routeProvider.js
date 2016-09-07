@@ -6,11 +6,13 @@ function myRouteProvider($routeProvider) {
 			})
 
 			.when('/home', {
-				templateUrl: '/app/home/template.html'
+				templateUrl: '/app/home/template.html',
+				controller: 'BackgroundHomeCtrl'
 			})
 
 			.when('/homeUser', {
-				templateUrl: '/app/homeUser/template.html'
+				templateUrl: '/app/homeUser/template.html',
+				controller: 'BackgroundHomeUserCtrl'
 			})
 
 			.when('/excursion/:id', {
