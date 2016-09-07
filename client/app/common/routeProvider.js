@@ -9,6 +9,10 @@ function myRouteProvider($routeProvider) {
 				templateUrl: '/app/home/home.html'
 			})
 
+			.when('/homeuser', {
+				templateUrl: '/app/homeUser/homeUser.html'
+			})
+
 			.when('/excursion/:id', {
 				templateUrl: '/app/details/template.html',
 				controller: 'ExcursionDetailsCtrl'

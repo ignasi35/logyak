@@ -1,32 +1,34 @@
+<div ng-include = "'../common/navbar.html'"></div>
+
 <div class="row">
-  <div class="col-xs-10">
-    <h2 class="sub-header" id="sub-header">Excursions Kayak Group</h2>
-  </div>
-  <div class="col-xs-2">
-     <a class="btn btn-default" id="editButton" ng-href="#/create">New Excursion</a>
-  </div>
+	<div class="col-xs-10">
+		<h2 class="sub-header" id="sub-header">Excursions Kayak Group</h2>
+	</div>
+	<div class="col-xs-2">
+		 <a class="btn btn-default" id="editButton" ng-href="#/create">New Excursion</a>
+	</div>
 
 </div>
 
 <div class="table-responsive" >
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Excursion</th>
-        <th>Date</th>
-        <th>Attendees</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody >
-      <tr ng-repeat = "excursion in excursions">
-        <td>{{excursion.name}}</td>
-        <td>{{excursion.date}}</td>
-        <td>{{excursion.attendees}}</td>
-        <td><a class="btn btn-default" ng-href="#/excursion/{{ excursion.id }}">See details</a></td>
-      </tr>
-    </tbody>
-  </table>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Excursion</th>
+				<th>Date</th>
+				<th>Attendees</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody >
+			<tr ng-repeat = "excursion in excursions">
+				<td>{{excursion.name}}</td>
+				<td>{{excursion.date}}</td>
+				<td>{{excursion.attendees}}</td>
+				<td><a class="btn btn-default" ng-href="#/excursion/{{ excursion.id }}">See details</a></td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
 

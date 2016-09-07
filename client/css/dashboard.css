@@ -16,6 +16,9 @@ body {
 
 }
 
+* {
+   border: 0px solid red !important;
+}
 
 /*
  * Global add-ons
@@ -289,7 +292,7 @@ dl {
 
 /* Sets picture on home page and backgroun color on other pages*/
 #backgroundBody { 
-      background: url(../../img/_homePics/homePic9.jpg) no-repeat center center fixed; 
+      background: url(../../img/_homePics/homePic1.jpg) no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -304,13 +307,15 @@ dl {
       color : #d2d9e3;
 }
 
-/* Changes color of nav bar*/
-#logyakNav {
+/* Changes color of nav bar*/ 
+#logyakNav  {
       background-color: #1A293E;
       opacity: 0.5;
       font-size: 1.3em;
       color : #d2d9e3;
 }
+
+
 
 /* Sizes logo picture*/
 #logoGroup {
@@ -328,7 +333,62 @@ dl {
       margin-top: 5px;
 }
 
+/* Quotes of the day, home page */
 .quoteDay {
-  color: #d2d9e3;
-  
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+
+  width: 65%;
 }
+
+.quoteDay h1{
+  color: #d2d9e3;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+#logoGroupHome {
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+}
+
+#nameGroupHome {
+  position: fixed;
+  top: 25px;
+  bottom: 0;
+  left: 100px;
+  color: #ff6613;
+  opacity: 0.7;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  font-size: 24px;
+
+}
+
+#loginHome {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    right: 2em;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+}
+
+
+
+#login  {
+  color: #d2d9e3;
+  font-family: 'Open Sans', sans-serif;
+  height: 1.5em;
+  text-align: center;
+}
+
+
