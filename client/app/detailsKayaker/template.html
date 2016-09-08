@@ -10,30 +10,37 @@
 
 <!-- Excursion Details -->
 <div class="responsive">
-	<div id="userThumnail">
-		<img src="../../img/users/annavilatusell.JPG"/>
+	<div class="row">
+		<div class="col-xs-3">
+			<div id="userThumnail">
+				<img src="../../img/users/avatar.png"/>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<div class="kayakerDetails">
+				<dl class="dl-horizontal" >
+					<dt>Ranking:</dt>
+					<dd>{{ kayaker.ranking }}</dd>
+					<dt>Miles:</dt>
+					<dd>{{ kayaker.miles }}</dd>
+					<dt>Kayak:</dt>
+					<dd>{{ kayaker.kayak}} </dd>
+					<dt>Paddle:</dt>
+					<dd>{{ kayaker.paddle }} </dd>
+					<dt>Notes:</dt>
+					<dd>{{ kayaker.notes }} </dd>
+				</dl>
+			</div>
+		</div>
 	</div>
-	<div class="kayakerDetails">
-		<dl class="dl-horizontal" >
-			<dt>Ranking:</dt>
-			<dd>{{ kayaker.ranking }}</dd>
-			<dt>Miles:</dt>
-			<dd>{{ kayaker.miles }}</dd>
-			<dt>Kayak:</dt>
-			<dd>{{ kayaker.kayak}} </dd>
-			<dt>Paddle:</dt>
-			<dd>{{ kayaker.paddle }} </dd>
-			<dt>Notes:</dt>
-			<dd>{{ kayaker.notes }} </dd>
-		</dl>
+	<div class="row">
+		<div class="col-xs-3">
+			<div>
+				<button ng-controller="DeleteKayakerCtrl" ng-click="deleteKayaker()" type="button" class="btn btn-danger" ng-href="#/kayaker/{{ kayaker.username }}">Delete</button>
+				<a class="btn btn-primary" ng-href="#/editKayaker/{{ kayaker.username }}">Edit</a>
+			</div>
+		</div>
 	</div>
-	<div>
-		<button ng-controller="DeleteKayakerCtrl" ng-click="deleteKayaker()" type="button" class="btn btn-danger" ng-href="#/kayaker/{{ kayaker.username }}">Delete</button>
-		<a class="btn btn-primary" ng-href="#/editKayaker/{{ kayaker.username }}">Edit</a>
-	</div>
-
-
-</div>
 <!-- /Excursion Details -->
 
 <!-- Excursions -->
