@@ -4,11 +4,13 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes');
+var compression = require('compression');
 
 var app = express();
 
 // for HTML rendering
-app.use( express.static( path.join( __dirname, '../client' )) );
+app.use(express.static(path.join( __dirname, '../client')));
+app.use(compression());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
