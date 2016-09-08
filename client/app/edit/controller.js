@@ -8,7 +8,6 @@ function ExcursionEditCtrl( $scope,  $routeParams, $rootScope, $location, DataEx
 	DataExcursionService.getOneExcursion(excursionId)
 		.then( function(result) {
 			$scope.excursion = result.data;
-			console.log($scope.excursion)
 		})
 		.catch( function(error) {
 			console.log('error', error)
@@ -17,13 +16,21 @@ function ExcursionEditCtrl( $scope,  $routeParams, $rootScope, $location, DataEx
 	DataKayakersService.getAllKayakers()
 		.then( function(result) {
 			$scope.kayakers = result.data;
-			console.log($scope.kayakers)
 		})
 		.catch( function(error) {
 			console.log('error', error)
 		});
 
 ///  altres metodes
+
+	$scope.attended = function(kayaker, excursion){
+		var arrayOfUsernameOfAttendees = excursion.attendees.map(function(att){return att.username;})
+		return arrayOfUsernameOfAttendees.includes(kayaker.username) ;
+	}
+
+	$scope.prettyPrint = function(attendee){
+		return attendee.name + " " + attendee.surname ;
+	};
 
 	$scope.update = function(excursion) {
 		DataExcursionService.updateExcursion(excursion)
@@ -33,10 +40,9 @@ function ExcursionEditCtrl( $scope,  $routeParams, $rootScope, $location, DataEx
 			.catch( function(error) {
 				console.log('error', error)
 			});
-
 	};
-		
 }
+
 
 ExcursionEditCtrl.$inject = ['$scope', '$routeParams', '$rootScope', '$location','DataExcursionService', 'DataKayakersService'];
 module.exports = ExcursionEditCtrl;
