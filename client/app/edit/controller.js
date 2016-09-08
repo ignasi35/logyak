@@ -23,6 +23,9 @@ function ExcursionEditCtrl( $scope,  $routeParams, $rootScope, $location, DataEx
 
 ///  altres metodes
 
+
+
+
 	$scope.attended = function(kayaker, excursion){
 		var arrayOfUsernameOfAttendees = excursion.attendees.map(function(att){return att.username;})
 		return arrayOfUsernameOfAttendees.includes(kayaker.username) ;

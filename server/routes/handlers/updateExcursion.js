@@ -14,6 +14,7 @@ function updateExcursion (req,res) {
 			seaConditions: excursion.seaConditions,
 			notes: excursion.notes,
 			links: excursion.links,
+			attendees: excursion.attendees.map(function(att){return att._id;}) 
 		},
 		function (err, excursion){
 			if (err) {
