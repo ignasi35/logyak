@@ -17,6 +17,7 @@ function createKayaker (req, res) {
 		var notesKayaker = req.body.notes;
 
 
+
 		var creationDate = (new Date())/1000;
 		var mergeNames = nameKayaker + "-" + surnameKayaker + "-" + creationDate;
 		var username = mergeNames.replace(/ /g,'_');
@@ -31,6 +32,7 @@ function createKayaker (req, res) {
 			kayak: kayakKayaker,
 			paddle: paddleKayaker,
 			notes: notesKayaker,
+			urlPhoto: ""
 			})
 
 		newKayaker.save( function(err, result) {

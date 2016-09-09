@@ -6,7 +6,8 @@ var kayakerSchema = {
 	username: { type: String, trim: true },
 	kayak: { type: String },
 	paddle: { type: String },
-	notes: { type: String }
+	notes: { type: String },
+	urlPhoto: { type: String }
 };
 
 module.exports = kayakerSchema;

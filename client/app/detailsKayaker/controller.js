@@ -6,8 +6,9 @@ function KayakerDetailsCtrl( $scope, $rootScope, $routeParams, DataKayakersServi
 
 	DataKayakersService.getOneKayaker(kayakerId)
 		.then( function(result) {
-			console.log(result.data)
+			//console.log(result.data)
 			$scope.kayaker = result.data;
+			console.log($scope.kayaker.urlPhoto); 
 
 		})
 		.catch( function(error) {
